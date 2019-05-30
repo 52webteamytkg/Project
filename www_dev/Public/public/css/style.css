@@ -1,0 +1,103 @@
+/*homelogo*/
+.navbar-brand {
+  padding-left: 10px;
+}
+
+nav img {
+  width: 180px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  left: 20px;
+  z-index: 1000;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  border-right: 1px solid #eee;
+}
+
+/* Sidebar navigation */
+.sidebar {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar .nav {
+  margin-bottom: 20px;
+}
+
+.sidebar .nav-item {
+  width: 100%;
+}
+
+.sidebar .nav-item + .nav-item {
+  margin-left: 0;
+}
+
+.sidebar .nav-link {
+  border-radius: 0;
+}
+
+/*サイドバー文字変更*/
+.nav-link {
+  color: #666666;
+  font-family: 'Amatic SC', cursive;
+  font-size: 28px;
+}
+
+.nav-category-link {
+  color: #666666;
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+  padding-left: 30px;
+}
+
+/*joinボタン*/
+/* 通常のボタン色 */
+.btn-outline-primary,
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+  color: #FF3F6F;
+  background-color: none;
+  border-color: #FF3F6F;
+  border: 3px solid #FF3F6F;
+  width: 100px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+}
+/* hover時（マウスカーソルを重ねた時）の色（通常より濃いor暗めの色を指定）*/
+.btn-outline-primary:hover {
+  color: white;
+  background-color: #32CDA6;
+  border-color: #32CDA6;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+}
+
+/*seachボタン*/
+.form-inline {
+  padding-top: 10px;
+  padding-left: 16px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+}
+
+
+/*
+ * Dashboard
+ */
+
+ /* Pictures */
+.pictures {
+  padding-bottom: 3rem;
+  width: 970px;
+  margin: 0;
+
+}
+
+main img {
+  padding: 1.5rem;
+  border: 1px solid #CCCCCC;
+}
