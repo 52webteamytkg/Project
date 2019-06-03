@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layout');
-});
+Route::get('/','PageController@index')->name('mazuimeshi.index');       // index.blade.php 表示
+
+Route::get('/detail','PageController@detail')->name('mazuimeshi.detail');     // detail.blade.php 表示
+Route::get('/login','PageController@login')->name('mazuimeshi.login');     // detail.blade.php 表示
+Route::get('/signup','PageController@signup')->name('mazuimeshi.signup');     // detail.blade.php 表示
