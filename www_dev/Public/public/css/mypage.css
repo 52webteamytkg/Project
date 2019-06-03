@@ -50,7 +50,7 @@ nav img {
 
 /*サイドバー文字変更*/
 .nav-link {
-  color: #666666;
+	color: #666666;
   font-family: 'Amatic SC', cursive;
   font-size: 28px;
 }
@@ -62,35 +62,11 @@ nav img {
   padding-left: 30px;
 }
 
-/*joinボタン*/
-/* 通常のボタン色 */
-.btn-outline-primary,
-.btn-outline-primary.disabled, .btn-outline-primary:disabled {
-  color: #FF3F6F;
-  background-color: none;
-  border-color: #FF3F6F;
-  border: 3px solid #FF3F6F;
-  width: 100px;
+.title-mypage{
+  color: #666666;
   font-family: 'Amatic SC', cursive;
-  font-size: 20px;
+  font-size: 28px;
 }
-/* hover時（マウスカーソルを重ねた時）の色（通常より濃いor暗めの色を指定）*/
-.btn-outline-primary:hover {
-  color: white;
-  background-color: #32CDA6;
-  border-color: #32CDA6;
-  font-family: 'Amatic SC', cursive;
-  font-size: 20px;
-}
-
-/*seachボタン*/
-.form-inline {
-  padding-top: 10px;
-  padding-left: 16px;
-  font-family: 'Amatic SC', cursive;
-  font-size: 20px;
-}
-
 
 /*
  * Dashboard
