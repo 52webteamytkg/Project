@@ -29,4 +29,23 @@ class PageController extends Controller
     {
         return view('mazuies/signup');
     }
+
+    // policy.blade.php 画面表示メソッド
+    public function policy()
+    {
+        return view('mazuies/policy');
+    }
+
+    // mypage.blade.php 画面表示メソッド
+    public function mypage()
+    {
+        return view('mazuies/mypage');
+    }
+
+     // edit.blade.php 画面表示メソッド
+    public function edit()
+    {
+        return view('mazuies/edit');
+    }
+
 }

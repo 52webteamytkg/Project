@@ -12,7 +12,7 @@
 	<!-- Font Amatic SC -->
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
 
-		<<!-- link rel="stylesheet" href="css/login.css"> -->
+		<!-- link rel="stylesheet" href="css/login.css"> -->
 	<link rel="stylesheet" type="text/css" href="/css/signup.css">
 
 	<title>Signup</title>

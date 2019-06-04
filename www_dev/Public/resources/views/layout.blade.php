@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 
 
-    <title>MazuiMeshi.com</title>
+    <title>@yield('title')</title>
 
 </head>
 <body style="padding-top: 90px;">
@@ -55,7 +55,7 @@
     <div class="container-fluid">
       <div class="row">
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
-          <ul class="nav nav-pills flex-column">
+{{--           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
               <a class="nav-link" href=""><button type="button" class="btn btn-outline-primary">Join us!</button></a>
             </li>
@@ -68,17 +68,17 @@
               <i class="fas fa-search fa-lg" style="color:#FF3F6F;"></i>
               </form>
             </li>
-          </ul>
-          <ul class="nav nav-pills flex-column">
-            {{-- <li class="nav-item">
+          </ul> --}}
+          {{-- <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
               <a class="nav-link" href="">Website Policy</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="">About Our Website </a>
-            </li> --}}
+            </li>
           </ul>
           <ul class="nav nav-pills flex-column">
-          {{--   <li class="nav-item">
+            <li class="nav-item">
               <p class="nav-link" href="">Category</p>
             </li>
             <li class="nav-item">
@@ -92,14 +92,14 @@
             </li>
             <li class="nav-item">
               <a class="nav-category-link" href="">Vibe</a>
-            </li> --}}
-          </ul>
+            </li>
+          </ul> --}}
         </nav>
       </div>
     </div>
 
     <!-- posted area -->
-    <div class="container-fluid">
+{{--     <div class="container-fluid">
       <main class="col-sm-9 offset-sm-6 col-md-6 offset-md-3 pt-3">
         <section class="row text-center pictures">
           <div class="col-9 col-sm-6 picture">
@@ -134,7 +134,9 @@
           </div>
         </section>
         </main>
-    </div>
+    </div> --}}
+
+    @yield('content')
 
 <script>
   (function () {

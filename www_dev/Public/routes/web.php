@@ -14,5 +14,8 @@
 Route::get('/','PageController@index')->name('mazuimeshi.index');       // index.blade.php 表示
 
 Route::get('/detail','PageController@detail')->name('mazuimeshi.detail');     // detail.blade.php 表示
-Route::get('/login','PageController@login')->name('mazuimeshi.login');     // detail.blade.php 表示
-Route::get('/signup','PageController@signup')->name('mazuimeshi.signup');     // detail.blade.php 表示
+Route::get('/login','PageController@login')->name('mazuimeshi.login');     	// login.blade.php 表示
+Route::get('/signup','PageController@signup')->name('mazuimeshi.signup');     // signup.blade.php 表示
+Route::get('/policy','PageController@policy')->name('mazuimeshi.policy');     // policy.blade.php 表示
+Route::get('/mypage','PageController@mypage')->name('mazuimeshi.mypage');     // mypage.blade.php 表示
+Route::get('/edit','PageController@edit')->name('mazuimeshi.edit');     // mypage.blade.php 表示
