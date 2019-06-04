@@ -50,23 +50,18 @@ nav img {
 
 /*サイドバー文字変更*/
 .nav-link {
-	color: #666666;
-  font-family: 'Amatic SC', cursive;
-  font-size: 28px;
-}
-
-.nav-category-link {
-  color: #666666;
-  font-family: 'Amatic SC', cursive;
-  font-size: 25px;
-  padding-left: 30px;
-}
-
-.title-mypage{
   color: #666666;
   font-family: 'Amatic SC', cursive;
   font-size: 28px;
 }
+
+.title-mypage {
+  color: #666666;
+  font-family: 'Amatic SC', cursive;
+  font-size: 28px;
+}
+
+
 
 /*
  * Dashboard
