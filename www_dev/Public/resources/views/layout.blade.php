@@ -29,7 +29,7 @@
 
     <!-- navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top" style="border-bottom: 2px solid #32CDA6;">
-          <a class="navbar-brand" href="#"><img src="/imgs/Mazui_homelogo.png" alt="homelogo"></a>
+          <a class="navbar-brand" href="/"><img src="/imgs/Mazui_homelogo.png" alt="homelogo"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -52,10 +52,10 @@
         </nav>
 
  <!-- sidebar -->
-    <div class="container-fluid">
+    {{-- <div class="container-fluid">
       <div class="row">
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
-{{--           <ul class="nav nav-pills flex-column">
+          <ul class="nav nav-pills flex-column">
             <li class="nav-item">
               <a class="nav-link" href=""><button type="button" class="btn btn-outline-primary">Join us!</button></a>
             </li>

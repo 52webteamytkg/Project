@@ -48,4 +48,10 @@ class PageController extends Controller
         return view('mazuies/edit');
     }
 
+    // about.blade.php 画面表示メソッド
+    public function about()
+    {
+        return view('mazuies/about');
+    }
+
 }

@@ -16,10 +16,10 @@
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="">Profile</a>
+              <a class="nav-link" href="{{ route('mazuimeshi.mypage') }}">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">Edit</a>
+              <a class="nav-link" href="{{ route('mazuimeshi.edit') }}">Edit</a>
             </li>
           </ul>
         </nav>

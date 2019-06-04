@@ -7,7 +7,7 @@
 @section('content')
 
 
-<div class="policy-content" style="margin-left: 300px;">
+<div class="policy-content" style="margin-left: 20px;">
 
     <h1>Website Policy</h1>
 

@@ -6,16 +6,18 @@
 
 @section('content')
 
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+
  <!-- sidebar -->
     <div class="container-fluid">
       <div class="row">
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
-              <a class="nav-link" href=""><button type="button" class="btn btn-outline-primary">Join us!</button></a>
+              <a class="nav-link" href="{{ route('mazuimeshi.signup') }}"><button type="button" class="btn btn-outline-primary">Join us!</button></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href=""><button type="button" class="btn btn-outline-primary">Login</button></a>
+              <a class="nav-link" href="{{ route('mazuimeshi.login') }}"><button type="button" class="btn btn-outline-primary">Login</button></a>
             </li>
             <li class="nav-item">
               <form class="form-inline">
@@ -26,10 +28,10 @@
           </ul>
           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="">Website Policy</a>
+              <a class="nav-link" href="{{ route('mazuimeshi.policy') }}">Website Policy</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">About Our Website </a>
+              <a class="nav-link" href="{{ route('mazuimeshi.about') }}">About Our Website </a>
             </li>
           </ul>
           <ul class="nav nav-pills flex-column">
@@ -58,7 +60,7 @@
       </div>
     </div>
 
-    <!-- posted area -->
+  <!-- posted area -->
     <div class="container-fluid">
       <main class="col-sm-9 offset-sm-6 col-md-6 offset-md-3 pt-3">
         <section class="row text-center pictures">
@@ -95,4 +97,4 @@
         </section>
         </main>
     </div>
-@endsections
+@endsection
