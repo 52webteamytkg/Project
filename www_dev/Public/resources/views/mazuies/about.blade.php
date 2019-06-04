@@ -12,8 +12,9 @@
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/about.css" type="text/css">
 
+    <link rel="stylesheet" type="text/css" href="/css/about.css">
+    
     <title>About Our Website</title>
 
 </head>
