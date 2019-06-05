@@ -18,15 +18,6 @@
 
 </head>
 <body style="padding-top: 90px;">
-    @guest
-        {{--ログインしていない（ゲスト状態）場合の処理 --}}
-        ゲスト
-    @else
-        {{-- ログインしている場合の処理 --}}
-        ログイン
-        {{Auth::user()->name}}
-    @endguest
-
     <!-- navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top" style="border-bottom: 2px solid #32CDA6;">
           <a class="navbar-brand" href="/"><img src="/imgs/Mazui_homelogo.png" alt="homelogo"></a>
@@ -35,6 +26,16 @@
           </button>
           <div class="mypage">
             <li><a class="btn-mypage" style="color: #FF3F6F;" href="/mypage">Mypage</a></li>
+          </div>
+          <div class="guest">
+            @guest
+                {{--ログインしていない（ゲスト状態）場合の処理 --}}
+                Guest
+            @else
+                {{-- ログインしている場合の処理 --}}
+                Login
+                {{Auth::user()->name}}
+            @endguest
           </div>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
@@ -137,23 +138,6 @@
     </div> --}}
 
     @yield('content')
-
-<script>
-  (function () {
-  'use strict'
-
-  if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-    var msViewportStyle = document.createElement('style')
-    msViewportStyle.appendChild(
-      document.createTextNode(
-        '@-ms-viewport{width:auto!important}'
-      )
-    )
-    document.head.appendChild(msViewportStyle)
-  }
-
-  }())
-</script>
 
     <!-- Bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="/css/about.css">
-    
+
     <title>About Our Website</title>
 
 </head>
@@ -22,7 +22,7 @@
 <body>
     <div class="page-wrapper">
         <div class="bg">
-            <div class="container text-center mt-2">
+            <div class="container text-center mt-1">
                 <div>
                    <img src="imgs/aaron-blanco-tejedor-768029-unsplash.jpg" style="height: 350px;">
                 </div>
@@ -43,7 +43,7 @@
                     </div>
                     <div class="textarea">
                         <p class="text-ja">最近ストレスかかえていませんか？当サイトはストレス発散サイトです。<br>人の内側にある邪悪な面に焦点を当ててみました。普通、人は何かに対してぼろかすに言うなんてことはしないものです。(...よね？)<br>たとえ言いたくても言わないようにするものです。ということで、当サイトは何かしらいじって楽しみたい人向けのサイトです。<br>溜まった鬱憤を吐き出しましょう！そしてリフレッシュして元気になりましょう！</p>
-                        <p class="text-ja">※投稿による問題が発生した場合、当方では一切責任を一切負いません。自己責任でお願い申し上げます。</p>
+                        <p class="text-ja">※投稿による問題が発生した場合、当方では一切責任を負いません。自己責任でお願い申し上げます。<span class="backhome"><a href="{{ route('mazuimeshi.index') }}">Back to Home</a></span></p>
                     </div>
             </div>
          </div>

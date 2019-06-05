@@ -36,9 +36,17 @@ body, html {
 .text-ja {
 	margin-bottom: 0;
 	font-size: 15px;
-	color: #7F7F7F;
+	color: #808080;
 }
 
 .textarea {
+	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+a {
+	padding-left: 30px;
+	font-family:'Permanent Marker', cursive;
+	font-size: 22px;
+	color: #FF3F6F;
 }
