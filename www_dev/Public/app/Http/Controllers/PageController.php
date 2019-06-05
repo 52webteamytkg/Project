@@ -9,6 +9,7 @@ class PageController extends Controller
     // index.blade.php 画面表示メソッド
     public function index()
     {
+
         return view('mazuies/index');
     }
 
