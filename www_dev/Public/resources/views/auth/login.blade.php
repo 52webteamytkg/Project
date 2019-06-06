@@ -1,4 +1,4 @@
-@extends('header')
+@extends('layouts.app')
 
 @section('style')
 	<link rel="stylesheet" type="text/css" href="/css/login.css">
