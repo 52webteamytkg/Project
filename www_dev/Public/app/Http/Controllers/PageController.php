@@ -9,7 +9,7 @@ class PageController extends Controller
     /************************************
      * index.blade.php 画面表示メソッド
      ************************************/
-    public function index($id)
+    public function index($user_id)
     {
         return view('mazuies/index');
     }
@@ -66,7 +66,7 @@ class PageController extends Controller
     /************************************
      * mypage.blade.php 画面表示メソッド
      ************************************/
-    public function mypage()
+    public function mypage($user_id)
     {
         return view('mazuies/mypage');
     }
