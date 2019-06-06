@@ -1,73 +1,91 @@
-@extends('layouts.app')
+@extends('header')
+
+@section('style')
+	<link rel="stylesheet" type="text/css" href="/css/login.css">
+@endsection
+
+@section('title')
+  Login
+@endsection
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+	<div class="container">
+	    <div class="row">
+	      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+	        <div class="card card-signin my-2">
+	          <div class="card-body">
+	          	{{-- Back to Home ボタン --}}
+	          	<a class="navbar-brand" href="{{ url('/') }}"><img class="homelogo" src="/imgs/Mazui_homelogo.png" alt="homelogo">
+	          	</a>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+	          	<h5 class="card-greeting text-center">Welcome Back!</h5>
+	            <h4 class="card-title text-center">Login&nbsp;&nbsp;&nbsp;Sign In</h4>
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+							 <form method="POST" action="{{ route('login') }}" class="form-signin">
+               		@csrf
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+		              <div class="form-label-group">
+		                <input type="email" id="inputEmail" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="Email address" name="email" value="{{ old('email') }}" required autofocus>
+		                <label for="inputEmail">{{ __('E-Mail Address') }}</label>
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
-                            </div>
-                        </div>
+		              </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+		              <div class="form-label-group">
+		                <input type="password" id="inputPassword" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="Password" name="password" required>
+		                <label for="inputPassword">{{ __('Password') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
+		                 						@if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
-                            </div>
-                        </div>
+		              </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+		              <div class="custom-control custom-checkbox mb-3">
+		                <input type="checkbox" class="custom-control-input" id="customCheck1" {{ old('remember') ? 'checked' : '' }}>
+		                <label class="custom-control-label" for="customCheck1"> {{ __('Remember Me') }}</label>
+		              </div>
 
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+		              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">{{ __('Login') }}</button>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
+		              @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+		              <hr class="my-2">
+
+									<div class="sns-coment text-center">
+										<p>Or Sign Up Using</p>
+									</div>
+
+		              <div class="btn-sns">
+			              <ul>
+			              	<li class="btn-facebook">
+				              	<a href=""><i class="fab fa-facebook-square fa-5x"></i></a>
+				             	</li>
+			              	<li class="btn-twitter">
+				              	<a href=""><i class="fab fa-twitter-square fa-5x"></i></a>
+				             	</li>
+				             	<li class="btn-google">
+				              	<a href=""><i class="fab fa-google-plus-square fa-5x"></i></a>
+				             	</li>
+				          	</ul>
+				          </div>
+
+				          <div class="signup text-center">
+				          	<a class="signup_text" href="{{ url('/signup') }}">Sign Up</a>
+				          </div>
+	            </form>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	 </div>
 @endsection

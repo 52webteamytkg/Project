@@ -4,9 +4,11 @@
  Website Policy
 @endsection
 
+@section('style')
+ <link rel="stylesheet" type="text/css" href="/css/style.css">
+@endsection
+
 @section('content')
-
-
 <div class="policy-content" style="margin-left: 20px;">
 
     <h1>Website Policy</h1>
