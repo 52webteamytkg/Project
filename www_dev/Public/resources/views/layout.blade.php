@@ -18,12 +18,24 @@
 
 </head>
 <body style="padding-top: 90px;">
+    @guest
+        {{--ログインしていない（ゲスト状態）場合の処理 --}}
+        ゲスト
+    @else
+        {{-- ログインしている場合の処理 --}}
+        ログイン
+        {{Auth::user()->name}}
+    @endguest
+
     <!-- navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top" style="border-bottom: 2px solid #32CDA6;">
           <a class="navbar-brand" href="#"><img src="/imgs/Mazui_homelogo.png" alt="homelogo"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <div class="mypage">
+            <li><a class="btn-mypage" style="color: #FF3F6F;" href="/mypage">Mypage</a></li>
+          </div>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item active">
@@ -58,15 +70,15 @@
             </li>
           </ul>
           <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
+            {{-- <li class="nav-item">
               <a class="nav-link" href="">Website Policy</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="">About Our Website </a>
-            </li>
+            </li> --}}
           </ul>
           <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
+          {{--   <li class="nav-item">
               <p class="nav-link" href="">Category</p>
             </li>
             <li class="nav-item">
@@ -80,12 +92,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-category-link" href="">Vibe</a>
-            </li>
-          </ul>
-          <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
-              <p class="nav-link" href="">Filter</p>
-            </li>
+            </li> --}}
           </ul>
         </nav>
       </div>
