@@ -4,12 +4,12 @@
   My page
 @endsection
 
-@section('content')
-
-
-{{--  <link rel="stylesheet" href="css/style.css"> --}}
+@section('style')
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
   <link rel="stylesheet" type="text/css" href="/css/mypage.css">
+@endsection
 
+@section('content')
  <!-- sidebar -->
     <div class="container-fluid">
       <div class="row">
