@@ -12,8 +12,11 @@
 	<div class="container">
 	    <div class="row">
 	      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-	        <div class="card card-signin my-5">
+	        <div class="card card-signin my-2">
 	          <div class="card-body">
+	          	{{-- Back to Home ボタン --}}
+	          	<a class="navbar-brand" href="{{ url('/') }}"><img class="homelogo" src="/imgs/Mazui_homelogo.png" alt="homelogo">
+	          	</a>
 	            <h4 class="card-title text-center">Sign up!</h4>
 	            <form class="form-signin">
 	              <div class="form-label-group">
@@ -43,8 +46,7 @@
 									<p>Or Sign Up Using</p>
 								</div>
 
-	              <div class="btn-sns">
-		              <ul>
+	              <div class="btn-sns text-center">
 		              	<li class="btn-facebook">
 			              	<a href=""><i class="fab fa-facebook-square fa-5x"></i></a>
 			             	</li>
@@ -54,7 +56,6 @@
 			             	<li class="btn-google">
 			              	<a href=""><i class="fab fa-google-plus-square fa-5x"></i></a>
 			             	</li>
-			          	</ul>
 			          </div>
 
 			          <div class="signup text-center">

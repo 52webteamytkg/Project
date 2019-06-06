@@ -21,7 +21,7 @@
 	          	<h5 class="card-greeting text-center">Welcome Back!</h5>
 	            <h4 class="card-title text-center">Login&nbsp;&nbsp;&nbsp;Sign In</h4>
 
-							 <form method="POST" action="{{ route('login') }}" class="form-signin">
+							<form method="POST" action="{{ route('login') }}" class="form-signin">
                		@csrf
 
 		              <div class="form-label-group">
@@ -65,8 +65,7 @@
 										<p>Or Sign Up Using</p>
 									</div>
 
-		              <div class="btn-sns">
-			              <ul>
+		              <div class="btn-sns text-center">
 			              	<li class="btn-facebook">
 				              	<a href=""><i class="fab fa-facebook-square fa-5x"></i></a>
 				             	</li>
@@ -76,7 +75,6 @@
 				             	<li class="btn-google">
 				              	<a href=""><i class="fab fa-google-plus-square fa-5x"></i></a>
 				             	</li>
-				          	</ul>
 				          </div>
 
 				          <div class="signup text-center">

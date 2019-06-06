@@ -1,3 +1,9 @@
+.homelogo{
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 180px;
+}
+
 .card-signin {
   border: 0;
   border-radius: 1rem;
@@ -133,7 +139,6 @@ li {
   width:100px;
   height:100px;
   line-height: 100px;
-  text-align: center;
 }
 
 .fa-facebook-square {
