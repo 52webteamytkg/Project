@@ -3,15 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class PageController extends Controller
 {
     /************************************
      * index.blade.php 画面表示メソッド
      ************************************/
-    public function index($user_id)
+    public function index()
     {
-        return view('mazuies/index');
+        // 全件読み込み
+        $posts = Post::all();
+        return view('mazuies/index',['posts'=>$posts]);
     }
 
     /************************************
