@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
 {
@@ -69,8 +70,11 @@ class PageController extends Controller
     /************************************
      * mypage.blade.php 画面表示メソッド
      ************************************/
-    public function mypage($user_id)
+    public function mypage()
     {
+        $user_id = Auth::user()->id;
+        dd(Auth::user());
+
         return view('mazuies/mypage');
     }
 
