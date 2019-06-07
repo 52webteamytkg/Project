@@ -16,10 +16,10 @@
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('mazuimeshi.signup') }}"><button type="button" class="btn btn-outline-primary">Join us!</button></a>
+              <a class="nav-link" href="{{ route('register') }}"><button type="button" class="btn btn-outline-primary">Join us!</button></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('mazuimeshi.login') }}"><button type="button" class="btn btn-outline-primary">Login</button></a>
+              <a class="nav-link" href="{{ route('login') }}"><button type="button" class="btn btn-outline-primary">Login</button></a>
             </li>
             <li class="nav-item">
               <form class="form-inline">
