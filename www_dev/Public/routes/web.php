@@ -32,14 +32,7 @@ Route::get('/signup','PageController@signup')->name('mazuimeshi.signup');       
 // ログイン後の画面
 Route::get('/edit','PageController@edit')->name('mazuimeshi.edit');             // edit.blade.php 表示
 Route::get('/mypage','PageController@mypage')->name('mazuimeshi.mypage');       // mypage.blade.php 表示
-<<<<<<< HEAD
 
-
-Route::get('/policy','PageController@policy')->name('mazuimeshi.policy');       // policy.blade.php 表示
-Route::get('/about','PageController@about')->name('mazuimeshi.about');          // edit.blade.php 表示
 
 Auth::routes();
-=======
 
-Auth::routes();
->>>>>>> f9026520c18877bbbfa8e4d48bcbdfdc4f0844e3
