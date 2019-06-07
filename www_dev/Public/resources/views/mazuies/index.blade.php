@@ -14,13 +14,22 @@
     <div class="container-fluid">
       <div class="row">
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+    {{-- サインアップ --}}
           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
               <a class="nav-link" href="{{ route('mazuimeshi.signup') }}"><button type="button" class="btn btn-outline-primary">Join us!</button></a>
             </li>
-            <li class="nav-item">
+          </ul>
+    {{-- ログイン・アウト --}}
+            <li class="nav-item-inout">
               <a class="nav-link" href="{{ route('mazuimeshi.login') }}"><button type="button" class="btn btn-outline-primary">Login</button></a>
             </li>
+
+            <li class="nav-item-inout">
+              <a class="nav-link" href=""><button type="button" class="btn btn-outline-primary">Logout</button></a>
+            </li>
+    {{-- 検索 --}}
+          <ul class="nav nav-pills flex-column">
             <li class="nav-item">
               <form class="form-inline">
               <input class="form-control mr-sm-2" style="width: 170px;" type="search" placeholder="Search" aria-label="Search">

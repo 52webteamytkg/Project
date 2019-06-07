@@ -27,7 +27,7 @@ nav img {
   position: fixed;
   top: 80px;
   bottom: 0;
-  left: 20px;
+  left: 5px;
   z-index: 1000;
   padding: 20px;
   overflow-x: hidden;
@@ -100,6 +100,10 @@ nav img {
   font-size: 20px;
 }
 
+.nav-item-inout {
+  display: inline-block;
+  width: 110px;
+}
 
 /*
  * Dashboard
