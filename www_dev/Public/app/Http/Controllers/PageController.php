@@ -15,7 +15,7 @@ class PageController extends Controller
     {
         // 全件読み込み
         $posts = Post::all();
-        return view('mazuies/index',['posts'=>$posts]);
+        return view('mazuies.index',['posts'=>$posts]);
     }
 
     /************************************
@@ -23,7 +23,7 @@ class PageController extends Controller
      ************************************/
     public function detail()
     {
-        return view('mazuies/detail');
+        return view('mazuies.detail');
     }
 
     /************************************
@@ -31,7 +31,7 @@ class PageController extends Controller
      ************************************/
     public function about()
     {
-        return view('mazuies/about');
+        return view('mazuies.about');
     }
 
     /************************************
@@ -39,24 +39,24 @@ class PageController extends Controller
      ************************************/
     public function policy()
     {
-        return view('mazuies/policy');
+        return view('mazuies.policy');
     }
 
     /************************************
      * login.blade.php 画面表示メソッド
      ************************************/
 
-    public function login()
-    {
-        return view('mazuies/login');
-    }
+    // public function login()
+    // {
+    //     return view('mazuies/login');
+    // }
 
     /************************************
      * signup.blade.php 画面表示メソッド
      ************************************/
     public function signup()
     {
-        return view('mazuies/signup');
+        return view('mazuies.signup');
     }
 
     /************************************
@@ -64,7 +64,7 @@ class PageController extends Controller
      ************************************/
     public function edit()
     {
-        return view('mazuies/edit');
+        return view('mazuies.edit');
     }
 
     /************************************
@@ -72,10 +72,8 @@ class PageController extends Controller
      ************************************/
     public function mypage()
     {
-        $user_id = Auth::user()->id;
-        dd(Auth::user());
-
-        return view('mazuies/mypage');
+        $login_id = Auth::user()->id;
+        return view('mazuies.mypage',['user_id'=>$login_id]);
     }
 
 }
