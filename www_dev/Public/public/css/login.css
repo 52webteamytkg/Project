@@ -1,3 +1,9 @@
+.homelogo{
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 180px;
+}
+
 .card-signin {
   border: 0;
   border-radius: 1rem;
@@ -6,18 +12,18 @@
 
 .card-greeting {
   font-family: 'Amatic SC', cursive;
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 .card-signin .card-title {
   margin-bottom: 2rem;
   font-weight: 300;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: 'Amatic SC', cursive;
 }
 
 .card-signin .card-body {
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .form-signin {
@@ -122,7 +128,7 @@
 
 /*SNSボタン*/
 
-.sns-coment{
+.sns-coment {
   color: #999999;
   font-family: 'Amatic SC', cursive;
   font-size: 22px;
@@ -153,4 +159,11 @@ li {
   font-size: 22px;
   color: #999999;
   border-bottom: 1px solid #999999;
+}
+
+/*Forgot Your Password?*/
+.btn-link {
+  font-family: 'Amatic SC', cursive;
+  font-size: 22px;
+  color: #FF3F6F;
 }

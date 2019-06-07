@@ -14,6 +14,15 @@ nav img {
   font-size: 28px;
 }
 
+.guest{
+  list-style-type: none;
+  display: inline;
+  font-family: 'Amatic SC', cursive;
+  font-size: 28px;
+  color: #666666;
+  padding-left: 20px;
+}
+
 .sidebar {
   position: fixed;
   top: 80px;
