@@ -18,6 +18,7 @@
 
 // ログイン前、後 共通の画面
 Route::get('/','PageController@index')->name('mazuimeshi.index');               // index.blade.php 表示
+
 Route::get('/detail','PageController@detail')->name('mazuimeshi.detail');       // detail.blade.php 表示
 
 // ログインに関係ない画面
@@ -32,4 +33,6 @@ Route::get('/signup','PageController@signup')->name('mazuimeshi.signup');       
 Route::get('/edit','PageController@edit')->name('mazuimeshi.edit');             // edit.blade.php 表示
 Route::get('/mypage','PageController@mypage')->name('mazuimeshi.mypage');       // mypage.blade.php 表示
 
+
 Auth::routes();
+
