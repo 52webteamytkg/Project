@@ -12,28 +12,27 @@
 
     @yield('style')
 
-    <title>@yield('title')</title>
+    <title>MazuiMeshi.com</title>
 
 </head>
 <body style="padding-top: 90px;">
+    @guest
+        {{--ログインしていない（ゲスト状態）場合の処理 --}}
+        ゲスト
+    @else
+        {{-- ログインしている場合の処理 --}}
+        ログイン
+        {{Auth::user()->name}}
+    @endguest
+
     <!-- navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top" style="border-bottom: 2px solid #32CDA6;">
-          <a class="navbar-brand" href="/"><img src="/imgs/Mazui_homelogo.png" alt="homelogo"></a>
+          <a class="navbar-brand" href="#"><img src="/imgs/Mazui_homelogo.png" alt="homelogo"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="mypage">
             <li><a class="btn-mypage" style="color: #FF3F6F;" href="/mypage">Mypage</a></li>
-          </div>
-          <div class="guest">
-            @guest
-                {{--ログインしていない（ゲスト状態）場合の処理 --}}
-                Guest
-            @else
-                {{-- ログインしている場合の処理 --}}
-                Login
-                {{Auth::user()->name}}
-            @endguest
           </div>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
@@ -51,7 +50,7 @@
         </nav>
 
  <!-- sidebar -->
-    {{-- <div class="container-fluid">
+    <div class="container-fluid">
       <div class="row">
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
           <ul class="nav nav-pills flex-column">
@@ -67,17 +66,17 @@
               <i class="fas fa-search fa-lg" style="color:#FF3F6F;"></i>
               </form>
             </li>
-          </ul> --}}
-          {{-- <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
+          </ul>
+          <ul class="nav nav-pills flex-column">
+            {{-- <li class="nav-item">
               <a class="nav-link" href="">Website Policy</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="">About Our Website </a>
-            </li>
+            </li> --}}
           </ul>
           <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
+          {{--   <li class="nav-item">
               <p class="nav-link" href="">Category</p>
             </li>
             <li class="nav-item">
@@ -91,14 +90,14 @@
             </li>
             <li class="nav-item">
               <a class="nav-category-link" href="">Vibe</a>
-            </li>
-          </ul> --}}
+            </li> --}}
+          </ul>
         </nav>
       </div>
     </div>
 
     <!-- posted area -->
-{{--     <div class="container-fluid">
+    <div class="container-fluid">
       <main class="col-sm-9 offset-sm-6 col-md-6 offset-md-3 pt-3">
         <section class="row text-center pictures">
           <div class="col-9 col-sm-6 picture">
@@ -133,9 +132,24 @@
           </div>
         </section>
         </main>
-    </div> --}}
+    </div>
 
-    @yield('content')
+<script>
+  (function () {
+  'use strict'
+
+  if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+    var msViewportStyle = document.createElement('style')
+    msViewportStyle.appendChild(
+      document.createTextNode(
+        '@-ms-viewport{width:auto!important}'
+      )
+    )
+    document.head.appendChild(msViewportStyle)
+  }
+
+  }())
+</script>
 
     <!-- Bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

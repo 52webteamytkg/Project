@@ -1,6 +1,8 @@
 @extends('header')
 
 @section('style')
+
+	<!-- link rel="stylesheet" href="css/login.css"> -->
 	<link rel="stylesheet" type="text/css" href="/css/signup.css">
 @endsection
 

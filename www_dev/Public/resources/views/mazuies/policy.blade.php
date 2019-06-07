@@ -1,5 +1,28 @@
 @extends('layout')
 
+   <body style="padding-top: 90px; padding-left: 10px;">
+    <!-- navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top" style="border-bottom: 2px solid #32CDA6;">
+          <a class="navbar-brand" style="padding-left: 10px" href="#"><img src="imgs/Mazui_homelogo.png" style="width: 180px;" alt="homelogo"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"><i class="fab fa-facebook fa-lg" style="color:#32CDA6"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fab fa-twitter fa-lg" style="color:#32CDA6"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fab fa-instagram fa-lg" style="color:#32CDA6"></i></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+<<<<<<< HEAD
 @section('title')
  Website Policy
 @endsection
@@ -10,6 +33,8 @@
 
 @section('content')
 <div class="policy-content" style="margin-left: 20px;">
+=======
+>>>>>>> f9026520c18877bbbfa8e4d48bcbdfdc4f0844e3
 
     <h1>Website Policy</h1>
 
@@ -115,6 +140,5 @@
             <li>By visiting this page on our website: http://localhost:8000/contact</li>
       
         </ul>
-
 </div>
 @endsection

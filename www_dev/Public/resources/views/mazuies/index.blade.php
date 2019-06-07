@@ -1,13 +1,39 @@
 @extends('layout')
 
+
+@section('style')
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+@endsection
+
 @section('title')
   Home
 @endsection
 
-@section('style')
-  {{--  <link rel="stylesheet" href="css/style.css"> --}}
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
-@endsection
+</head>
+<body style="padding-top: 90px;">
+    <!-- navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top" style="border-bottom: 2px solid #32CDA6;">
+          <a class="navbar-brand" href="#"><img src="/imgs/Mazui_homelogo.png" alt="homelogo"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="mypage">
+            <li><a class="btn_mypage" style="color: #FF3F6F;" href="/mypage">Mypage</a></li>
+          </div>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"><i class="fab fa-facebook fa-lg" style="color:#32CDA6"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fab fa-twitter fa-lg" style="color:#32CDA6"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fab fa-instagram fa-lg" style="color:#32CDA6"></i></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
 @section('content')
  <!-- sidebar -->
@@ -31,9 +57,11 @@
           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
               <a class="nav-link" href="{{ route('mazuimeshi.policy') }}">Website Policy</a>
+
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('mazuimeshi.about') }}">About Our Website </a>
+
             </li>
           </ul>
           <ul class="nav nav-pills flex-column">
@@ -62,7 +90,7 @@
       </div>
     </div>
 
-  <!-- posted area -->
+    <!-- posted area -->
     <div class="container-fluid">
       <main class="col-sm-9 offset-sm-6 col-md-6 offset-md-3 pt-3">
         <section class="row text-center pictures">
