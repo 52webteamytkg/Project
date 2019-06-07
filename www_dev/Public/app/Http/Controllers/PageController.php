@@ -69,7 +69,7 @@ class PageController extends Controller
     /************************************
      * mypage.blade.php 画面表示メソッド
      ************************************/
-    public function mypage($user_id)
+    public function mypage()
     {
         return view('mazuies/mypage');
     }

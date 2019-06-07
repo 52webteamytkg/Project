@@ -18,7 +18,7 @@
 <body style="padding-top: 90px;">
     <!-- navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top" style="border-bottom: 2px solid #32CDA6;">
-          <a class="navbar-brand" href="#"><img src="/imgs/Mazui_homelogo.png" alt="homelogo"></a>
+          <a class="navbar-brand" href="/"><img src="/imgs/Mazui_homelogo.png" alt="homelogo"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
