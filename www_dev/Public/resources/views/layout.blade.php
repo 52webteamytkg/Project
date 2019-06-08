@@ -15,7 +15,7 @@
     <title>@yield('title')</title>
 
 </head>
-<body style="padding-top: 90px;">
+<body>
     <!-- navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top" style="border-bottom: 2px solid #32CDA6;">
           <a class="navbar-brand" href="/"><img src="/imgs/Mazui_homelogo.png" alt="homelogo"></a>

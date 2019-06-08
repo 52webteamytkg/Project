@@ -1,10 +1,19 @@
-/*homelogo*/
+/**************************************
+ * 全Page 共通 CSS
+ **************************************/
+.wrapper{
+    padding-top:4.5rem;
+}
+
+/* -- Navigation tobpar -- */
+.navbar{
+    border-bottom: 2px solid #32CDA6;
+}
 .navbar-brand {
   padding-left: 10px;
 }
-
-nav img {
-  width: 180px;
+img.home-logo {
+    width: 180px;
 }
 
 .mypage{
@@ -12,6 +21,10 @@ nav img {
   display: inline;
   font-family: 'Amatic SC', cursive;
   font-size: 28px;
+}
+
+.btn-mypage{
+    color: #FF3F6F;
 }
 
 .guest{
@@ -35,7 +48,11 @@ nav img {
   border-right: 1px solid #eee;
 }
 
-/* Sidebar navigation */
+.sns-logo{
+    color:#32CDA6;
+}
+
+/* -- Navigation Sidebar -- */
 .sidebar {
   padding-left: 0;
   padding-right: 0;

@@ -1,4 +1,4 @@
-@extends('header')
+@extends('layout')
 
 @section('style')
 	<link rel="stylesheet" type="text/css" href="/css/login.css">
@@ -8,7 +8,7 @@
   Login
 @endsection
 
-@section('content')
+@section('body')
 	<div class="container">
 	    <div class="row">
 	      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
