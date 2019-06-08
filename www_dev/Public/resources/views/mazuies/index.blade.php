@@ -26,7 +26,18 @@
             </li>
 
             <li class="nav-item-inout">
-              <a class="nav-link" href=""><button type="button" class="btn btn-outline-primary">Logout</button></a>
+              {{-- <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+              </a> --}}
+
+              <a class="nav-link" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+              <button type="button" class="btn btn-outline-primary btn-logout">{{ __('Logout') }}</button></a>
+             {{--  <a class="nav-link" href=""><button type="button" class="btn btn-outline-primary">Logout</button></a> --}}
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+              </form>
             </li>
     {{-- 検索 --}}
           <ul class="nav nav-pills flex-column">

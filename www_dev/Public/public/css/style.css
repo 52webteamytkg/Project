@@ -27,7 +27,7 @@ nav img {
   position: fixed;
   top: 80px;
   bottom: 0;
-  left: 5px;
+  left: 0;
   z-index: 1000;
   padding: 20px;
   overflow-x: hidden;
@@ -120,4 +120,11 @@ nav img {
 main img {
   padding: 1.5rem;
   border: 1px solid #CCCCCC;
+}
+
+/*logoutボタン*/
+.btn-logout{
+  color: #32CDA6;
+  border-color: #32CDA6;
+  border: 3px solid #32CDA6;
 }
