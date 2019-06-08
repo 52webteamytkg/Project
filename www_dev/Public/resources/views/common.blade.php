@@ -47,7 +47,7 @@
 
         {{-- ****** Main Contents ****** --}}
         <div class="container-fluid bg-white mt-5">
-            @yield('body')
+            @yield('contents')
         </div>
 
     </div>

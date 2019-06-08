@@ -20,7 +20,7 @@
     </ul>
 @endsection
 
-@section('content')
+@section('main_content')
 	<!-- posted area -->
     <div class="container-fluid">
       <main class="col-sm-9 offset-sm-6 col-md-6 offset-md-3 pt-3">

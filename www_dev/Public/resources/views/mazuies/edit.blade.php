@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.layout')
 
 @section('title')
   Edit page
@@ -11,7 +11,7 @@
 
 	<title>Edit page</title>
 
-@section('content')
+@section('main_contents')
  <!-- sidebar -->
     <div class="container-fluid">
       <div class="row">

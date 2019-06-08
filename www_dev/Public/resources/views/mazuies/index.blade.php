@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('style')
-  {{-- <link rel="stylesheet" type="text/css" href="/css/style.css"> --}}
+  <link rel="stylesheet" type="text/css" href="/css/index.css">
 @endsection
 
 @section('title')
@@ -13,10 +13,12 @@
         @guest
             {{-- サインアップ --}}
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('register') }}"><button type="button" class="btn btn-outline-primary">{{__('Join us!')}}</button></a>
+                <a class="nav-link d-inline-block" href="{{ route('register') }}">
+                    <button type="button" class="btn btn-outline-primary">{{__('Join us!')}}</button>
+                </a>
             </li>
             {{-- ログイン --}}
-            <li class="nav-item-inout">
+            <li class="nav-item-inout d-inline">
                 <a class="nav-link" href="{{ route('login') }}"><button type="button" class="btn btn-outline-primary">{{__('Login')}}</button></a>
             </li>
         @else
@@ -69,7 +71,7 @@
         </ul>
 @endsection
 
-@section('content')
+@section('main_content')
     <!-- posted area -->
     <div class="container-fluid">
       <main class="col-sm-9 offset-sm-6 col-md-6 offset-md-3 pt-3">
