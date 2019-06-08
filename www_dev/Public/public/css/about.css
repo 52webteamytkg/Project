@@ -6,7 +6,9 @@ body, html {
     position: relative;
     margin-right: 0 !important;
     margin: 0;
-    background-image: url("mazui_bg.png");
+    background-image: url("../imgs/mazui_bg.png");
+}
+.wrapper{
 }
 
 .bg {

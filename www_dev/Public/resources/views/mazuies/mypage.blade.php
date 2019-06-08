@@ -1,37 +1,25 @@
-@extends('layout')
+@extends('layouts.layout')
 
 @section('style')
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
   <link rel="stylesheet" type="text/css" href="/css/mypage.css">
 @endsection
 
 @section('title')
- | My page - {{Auth::user()->name}}
+ | My page : {{Auth::user()->name}}
 @endsection
 
-@section('content')
- <!-- sidebar -->
-    <div class="container-fluid">
-      <div class="row">
-        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
-          <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('mazuimeshi.mypage') }}">Profile</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('mazuimeshi.edit') }}">Edit</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+@section('sidebar_content')
+    <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('mazuimeshi.mypage') }}">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('mazuimeshi.edit') }}">Edit</a>
+        </li>
+    </ul>
+@endsection
 
+@section('main_content')
 	<!-- posted area -->
     <div class="container-fluid">
       <main class="col-sm-9 offset-sm-6 col-md-6 offset-md-3 pt-3">
