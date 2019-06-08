@@ -1,4 +1,4 @@
-@extends('common')
+@extends('head')
 
 @section('style')
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
