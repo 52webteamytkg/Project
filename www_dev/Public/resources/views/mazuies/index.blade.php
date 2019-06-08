@@ -14,13 +14,24 @@
     <div class="container-fluid">
       <div class="row">
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+          @guest
           <ul class="nav nav-pills flex-column">
+            {{-- サインアップ --}}
             <li class="nav-item">
               <a class="nav-link" href="{{ route('register') }}"><button type="button" class="btn btn-outline-primary">{{__('Join us!')}}</button></a>
             </li>
-            <li class="nav-item">
+            {{-- Logins --}}
+            <li class="nav-item-inout">
               <a class="nav-link" href="{{ route('login') }}"><button type="button" class="btn btn-outline-primary">{{__('Login')}}</button></a>
             </li>
+            @else
+            {{-- Logout --}}
+            <li class="nav-item-inout">
+              <a class="nav-link" href="{{ route('logout') }}"><button type="button" class="btn btn-outline-primary">{{__('Logout')}}</button></a>
+            </li>
+            @endguest
+    {{-- 検索 --}}
+          <ul class="nav nav-pills flex-column">
             <li class="nav-item">
               <form class="form-inline">
               <input class="form-control mr-sm-2" style="width: 170px;" type="search" placeholder="Search" aria-label="Search">
