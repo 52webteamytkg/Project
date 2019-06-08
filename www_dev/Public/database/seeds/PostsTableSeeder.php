@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class PostsTableSeeder extends Seeder
 {
@@ -17,20 +18,20 @@ class PostsTableSeeder extends Seeder
             [
                 'title'     => 'Pizza',
                 'caption'   => 'ブルーピザ',
-                'img_path'  => '1.png',
-                'category'  => '3',
+                'photo'     => '1.png',
+                'category'  => '1',
             ],
             [
                 'title'     => 'Ice',
                 'caption'   => 'ソフトクリーム',
-                'img_path'  => '2.png',
-                'category'  => '2',
+                'photo'     => '2.png',
+                'category'  => '1',
             ],
             [
                 'title'     => 'ナチョス？？',
                 'caption'   => 'ぶらぶらぶら。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。',
-                'img_path'  => '3.jpg',
-                'category'  => '3',
+                'photo'     => '3.jpg',
+                'category'  => '1',
             ]
         ];
 
@@ -38,7 +39,7 @@ class PostsTableSeeder extends Seeder
             DB::table('posts')->insert([
                 'title'       => $post['title'],
                 'caption'     => $post['caption'],
-                'img_path'    => $post['img_path'],
+                'photo'       => $post['photo'],
                 'user_id'     => $user->id,
                 'catrgory_id' => $post['category'],
                 'created_at'  => Carbon::now(),
