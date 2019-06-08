@@ -6,7 +6,7 @@
 @endsection
 
 @section('title')
-  My page
+ | My page - {{Auth::user()->name}}
 @endsection
 
 @section('content')
@@ -16,12 +16,16 @@
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('mazuimeshi.mypage') }}">Profile</a>
-
+                <a class="nav-link" href="{{ route('mazuimeshi.mypage') }}">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('mazuimeshi.edit') }}">Edit</a>
-
+                <a class="nav-link" href="{{ route('mazuimeshi.edit') }}">Edit</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
             </li>
           </ul>
         </nav>
