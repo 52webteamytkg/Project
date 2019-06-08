@@ -42,7 +42,7 @@
             <li class="nav-item">
             <form class="form-inline">
             <input class="form-control mr-sm-2" style="width: 170px;" type="search" placeholder="Search" aria-label="Search">
-            <i class="fas fa-search fa-lg" style="color:#FF3F6F;"></i>
+            <i class="fas fa-search fa-lg"></i>
             </form>
             </li>
         </ul>
