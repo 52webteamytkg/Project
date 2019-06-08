@@ -4,12 +4,8 @@
  | Website Policy
 @endsection
 
-@section('style')
- <link rel="stylesheet" type="text/css" href="/css/policy.css">
-@endsection
-
 @section('body')
-<div class="policy-content p-5">
+<div class="policy-content p-2">
 
 
     <h1>Website Policy</h1>

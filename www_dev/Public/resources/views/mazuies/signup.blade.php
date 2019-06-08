@@ -1,4 +1,4 @@
-@extends('header')
+@extends('common')
 
 @section('style')
 
