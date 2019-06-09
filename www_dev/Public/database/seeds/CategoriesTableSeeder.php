@@ -41,15 +41,47 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'South American',
                 'type' => 2,
             ],
+
+            [
+                'name' => 'Creepy',
+                'type' => 1,
+            ],
+
+            [
+                'name' => 'Disgusting',
+                'type' => 1,
+            ],
+
+            [
+                'name' => 'Bizarre',
+                'type' => 1,
+            ],
+            [
+                'name' => 'Unbelivable',
+                'type' => 1,
+            ],
+
+            [
+                'name' => 'Famous',
+                'type' => 1,
+            ],
+
+            [
+                'name' => 'Garbage',
+                'type' => 1,
+            ],
+            [
+                'name' => 'Funny',
+                'type' => 1,
+            ],
         ];
 
         // deta登録
 
         foreach ($categories as $category) {
-            DB::table('catecories')->insert([
-                'id'    => '',
-                'name'  => '',
-                'type'  => '',
+            DB::table('categories')->insert([
+                'name'  => $category['name'],
+                'type'  => $category['type'],
             ]);
         }
     }
