@@ -22,7 +22,8 @@ class PageController extends Controller
     {
         $posts = 0;
         // 今参照中の投稿データを引数でもらって、
-        //
+        // dislike_postテーブルをSelect（Count）して
+        // dislikeの多い順からソート（ORDER BY -> DESC）する
         return redirect()->route('mazuies.index',['posts'=>$posts]);
     }
 
@@ -32,6 +33,8 @@ class PageController extends Controller
     public function detail($post_id)
     {
         $post = Post::find($post_id);
+        // $coments = DB::table('comments')->find($post_id);
+        // dd(['post'=>$post]);
         return view('mazuies.detail',['post'=>$post]);
     }
 
