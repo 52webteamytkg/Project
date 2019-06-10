@@ -134,11 +134,12 @@
   font-size: 22px;
 }
 
-li {
+ul.sns li {
   display: inline-block;
   width:100px;
   height:100px;
   line-height: 100px;
+  padding-right: 30px;
 }
 
 .fa-facebook-square {

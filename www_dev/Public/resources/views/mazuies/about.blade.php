@@ -13,7 +13,7 @@
 @endsection
 
 @section('body')
-    <div class="page-wrapper pt-5">
+    <div class="page-wrapper">
         <div class="bg">
             <div class="container text-center mt-1">
                 <div>
