@@ -11,28 +11,43 @@
 |
 // */
 
-
-// Route::get('/', function () {
-//     return view('login');
-// });
-
-// ログイン前、後 共通の画面
+/**************************************
+ * ログイン前、後 共通の画面
+ **************************************/
 Route::get('/','PageController@index')->name('mazuimeshi.index');               // index.blade.php 表示
 
 Route::get('/detail','PageController@detail')->name('mazuimeshi.detail');       // detail.blade.php 表示
 
-// ログインに関係ない画面
+/**************************************
+ * ログインに関係ない画面表示
+ **************************************/
 Route::get('/about','PageController@about')->name('mazuimeshi.about');          // about.blade.php 表示
 Route::get('/policy','PageController@policy')->name('mazuimeshi.policy');       // policy.blade.php 表示
 
-// ログイン前の画面
-Route::get('/mylogin','PageController@login')->name('mazuimeshi.login');        // login.blade.php 表示
-Route::get('/signup','PageController@signup')->name('mazuimeshi.signup');       // signup.blade.php 表示
+/**************************************
+ * ログイン機能
+ **************************************/
+// ** Authクラスを利用するため削除 **
+// Route::get('/mylogin','PageController@login')->name('mazuimeshi.login');        // login.blade.php 表示
+// Route::get('/signup','PageController@signup')->name('mazuimeshi.signup');       // signup.blade.php 表示
+// Auth::routes(); -> 個別設定に変更
+Route::get('members/login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('members/login', 'Auth\LoginController@login');
+Route::post('members/logout', 'Auth\LoginController@logout')->name('logout');
 
-// ログイン後の画面
-Route::get('/edit','PageController@edit')->name('mazuimeshi.edit');             // edit.blade.php 表示
-Route::get('/mypage','PageController@mypage')->name('mazuimeshi.mypage');       // mypage.blade.php 表示
+Route::get('members/signup', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('members/signup', 'Auth\RegisterController@register');
 
+Route::get('members/password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('members/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('members/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+Route::post('members/password/reset', 'Auth\ResetPasswordController@reset');
 
-Auth::routes();
+/**************************************
+ * ログイン後
+ **************************************/
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/edit','PageController@edit')->name('mazuimeshi.edit');             // edit.blade.php 表示
+    Route::get('/mypage','PageController@mypage')->name('mazuimeshi.mypage');       // mypage.blade.php 表示
+});
 
