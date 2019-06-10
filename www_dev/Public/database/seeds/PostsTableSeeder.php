@@ -18,19 +18,19 @@ class PostsTableSeeder extends Seeder
             [
                 'title'     => 'Pizza',
                 'caption'   => 'ブルーピザ',
-                'photo'     => 'public/posts_img/1.png',
+                'img_url'     => 'public/posts_img/1.png',
                 'category'  => '1',
             ],
             [
                 'title'     => 'Ice',
                 'caption'   => 'ソフトクリーム',
-                'photo'     => 'public/posts_img/2.png',
+                'img_url'     => 'public/posts_img/2.png',
                 'category'  => '1',
             ],
             [
                 'title'     => 'ナチョス？？',
                 'caption'   => 'ぶらぶらぶら。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。',
-                'photo'     => 'public/posts_img/3.jpg',
+                'img_url'     => 'public/posts_img/3.jpg',
                 'category'  => '1',
             ]
         ];
@@ -39,7 +39,7 @@ class PostsTableSeeder extends Seeder
             DB::table('posts')->insert([
                 'title'       => $post['title'],
                 'caption'     => $post['caption'],
-                'photo'       => $post['photo'],
+                'img_url'       => $post['img_url'],
                 'user_id'     => $user->id,
                 'catrgory_id' => $post['category'],
                 'created_at'  => Carbon::now(),
