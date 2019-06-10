@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Carbon\Carbon;
+use Carbon\Carbon;  
 
 class PostsTableSeeder extends Seeder
 {
@@ -18,19 +18,19 @@ class PostsTableSeeder extends Seeder
             [
                 'title'     => 'Pizza',
                 'caption'   => 'ブルーピザ',
-                'photo'     => '1.png',
+                'photo'     => 'public/posts_img/1.png',
                 'category'  => '1',
             ],
             [
                 'title'     => 'Ice',
                 'caption'   => 'ソフトクリーム',
-                'photo'     => '2.png',
+                'photo'     => 'public/posts_img/2.png',
                 'category'  => '1',
             ],
             [
                 'title'     => 'ナチョス？？',
                 'caption'   => 'ぶらぶらぶら。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。',
-                'photo'     => '3.jpg',
+                'photo'     => 'public/posts_img/3.jpg',
                 'category'  => '1',
             ]
         ];

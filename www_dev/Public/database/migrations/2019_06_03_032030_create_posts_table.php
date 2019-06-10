@@ -16,7 +16,7 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title', 32)->default('noTitle');
-            $table->string('photo', 64);
+            $table->string('img_url', 64);
             $table->text('caption');
             $table->integer('user_id');
             $table->integer('catrgory_id');
