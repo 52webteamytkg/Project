@@ -18,12 +18,21 @@ class PageController extends Controller
         return view('mazuies.index',['posts'=>$posts]);
     }
 
+    public function ranking()
+    {
+        $posts = 0;
+        // 今参照中の投稿データを引数でもらって、
+        //
+        return redirect()->route('mazuies.index',['posts'=>$posts]);
+    }
+
     /************************************
      * detail.blade.php 画面表示メソッド
      ************************************/
-    public function detail()
+    public function detail($post_id)
     {
-        return view('mazuies.detail');
+        $post = Post::find($post_id);
+        return view('mazuies.detail',['post'=>$post]);
     }
 
     /************************************
