@@ -85,7 +85,7 @@
                             {{-- dislike btn 機能 --}}
                           {{--   <form method="POST" action="{{route('post.dislike', ['id' => $post['id']]) }} " > --}}
                             @csrf
-                            <li><button type="submit" class="btn btn-primary">
+                            <li><button type="submit" class="btn btn-secondly">
                             <i class="fas fa-thumbs-down fa-lg"></i>
                             </button></li>
                             {{-- dislike カウント --}}

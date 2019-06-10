@@ -153,17 +153,15 @@ main {
 }
 
 /*dislikeボタン*/
-.btn-primary,
-.btn-primary.disabled, .btn-primary:disabled {
+.btn-secondly,
+.btn-secondly.disabled, .btn-secondly:disabled {
   width: 50px;
   text-align: center;
-  background-color: white;
   color: #32CDA6;
   border: none;
 }
 /* hover時（マウスカーソルを重ねた時）の色（通常より濃いor暗めの色を指定）*/
-.btn-primary:hover {
-  background-color: white;
+.btn-secondly:hover {
   color: #32CDA6;
 }
 
