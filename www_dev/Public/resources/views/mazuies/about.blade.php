@@ -1,19 +1,19 @@
-@extends('header')
+@extends('head')
 
 @section('style')
-
+{{-- Google Fonts --}}
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/about.css">
 
+    <link rel="stylesheet" type="text/css" href="/css/about.css">
 @endsection
 
 @section('title')
-  About Our Website
+ | About Our Website
 @endsection
 
-@section('content')
-    <div class="page-wrapper">
+@section('body')
+    <div class="page-wrapper pt-5">
         <div class="bg">
             <div class="container text-center mt-1">
                 <div>

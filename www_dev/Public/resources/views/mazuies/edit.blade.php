@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.layout')
 
 @section('title')
   Edit page
@@ -9,27 +9,20 @@
   <link rel="stylesheet" type="text/css" href="/css/edit.css">
 @endsection
 
-	<title>Edit page</title>
+@section('sidebar_content')
+    <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+        <a class="nav-link" href="{{ route('mazuimeshi.mypage') }}">Profile</a>
 
-@section('content')
- <!-- sidebar -->
-    <div class="container-fluid">
-      <div class="row">
-        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
-          <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('mazuimeshi.mypage') }}">Profile</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{{ route('mazuimeshi.edit') }}">Edit</a>
 
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('mazuimeshi.edit') }}">Edit</a>
+        </li>
+    </ul>
+@endsection
 
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-
+@section('main_content')
 	<!-- edit area -->
     <div class="container">
         <div class="row">
