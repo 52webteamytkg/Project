@@ -88,6 +88,10 @@ img.home-logo {
   padding-left: 30px;
 }
 
+.fa-search{
+  color:#FF3F6F;
+}
+
 /*joinボタン*/
 /* 通常のボタン色 */
 .btn-outline-primary,

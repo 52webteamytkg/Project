@@ -4,7 +4,7 @@
  | Website Policy
 @endsection
 
-@section('body')
+@section('contents')
 <div class="policy-content p-2">
 
 
