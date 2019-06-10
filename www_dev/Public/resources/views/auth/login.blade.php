@@ -43,8 +43,8 @@
 		              </div>
 
 		              <div class="custom-control custom-checkbox mb-3">
-		                <input type="checkbox" class="custom-control-input" id="customCheck1" {{ old('remember') ? 'checked' : '' }}>
-		                <label class="custom-control-label" for="customCheck1"> {{ __('Remember Me') }}</label>
+		                <input type="checkbox" class="form-check-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+		                <label class="form-check-label" for="remember"> {{ __('Remember Me') }}</label>
 		              </div>
 
 		              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">{{ __('Login') }}</button>
