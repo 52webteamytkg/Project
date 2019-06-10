@@ -12,7 +12,7 @@
 	<div class="container">
 	    <div class="row">
 	      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-	        <div class="card card-signin my-2">
+	        <div class="card card-signin">
 	          <div class="card-body">
 	          	<h5 class="card-greeting text-center">Welcome Back!</h5>
 	            <h4 class="card-title text-center">Login&nbsp;&nbsp;&nbsp;Sign In</h4>
