@@ -1,3 +1,8 @@
+.container {
+	margin-left: 250px;
+	margin-right: 20px;
+}
+
 .pic img{
 	width: 600px;
 	height: 400px;
@@ -24,13 +29,13 @@ label {
 }
 
 .btn-submit {
-	text-align: right;
+	text-align: center;
 	font-family: 'Amatic SC', cursive;
 	font-size: 20px;
 }
 /*submitボタン*/
 /* 通常のボタン色 */
-.btn-outline-primary,
+.btn-submit .btn-outline-primary,
 .btn-outline.primary.disabled, .btn-outline-primar:disabled {
   color: #666666;
   background-color: #32CDA6;
@@ -40,7 +45,7 @@ label {
   width: 100px;
 }
 /* hover時（マウスカーソルを重ねた時）の色（通常より濃いor暗めの色を指定）*/
-.btn-outline-primary:hover {
+.btn-submit .btn-outline-primary:hover {
   color: #666666;
   background-color: #FFF321;
   border-color: #FFF321;

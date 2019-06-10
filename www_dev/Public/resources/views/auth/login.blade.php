@@ -15,11 +15,12 @@
 	        <div class="card card-signin">
 	          <div class="card-body">
 	          	<h5 class="card-greeting text-center">Welcome Back!</h5>
+	          	{{-- title --}}
 	            <h4 class="card-title text-center">Login&nbsp;&nbsp;&nbsp;Sign In</h4>
-
+							{{-- form area --}}
 							<form method="POST" action="{{ route('login') }}" class="form-signin">
                		@csrf
-
+									{{-- input email --}}
 		              <div class="form-label-group">
 		                <input type="email" id="inputEmail" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="Email address" name="email" value="{{ old('email') }}" required autofocus>
 		                <label for="inputEmail">{{ __('E-Mail Address') }}</label>
@@ -31,6 +32,7 @@
                                 @endif
 		              </div>
 
+									{{-- input password --}}
 		              <div class="form-label-group">
 		                <input type="password" id="inputPassword" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="Password" name="password" required>
 		                <label for="inputPassword">{{ __('Password') }}</label>
@@ -42,11 +44,13 @@
                                 @endif
 		              </div>
 
+									{{-- remember pw --}}
 		              <div class="custom-control custom-checkbox mb-3">
-		                <input type="checkbox" class="custom-control-input" id="customCheck1" {{ old('remember') ? 'checked' : '' }}>
-		                <label class="custom-control-label" for="customCheck1"> {{ __('Remember Me') }}</label>
+		                <input type="checkbox" class="form-check-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+		                <label class="form-check-label" for="remember"> {{ __('Remember Me') }}</label>
 		              </div>
 
+									{{-- submit btn --}}
 		              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">{{ __('Login') }}</button>
 
 		              @if (Route::has('password.request'))
