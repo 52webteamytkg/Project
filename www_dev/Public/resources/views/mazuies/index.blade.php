@@ -40,7 +40,7 @@
     {{-- 検索 --}}
         <ul class="nav nav-pills flex-column">
             <li class="nav-item">
-            <form class="form-inline">
+            <form class="form-inline search">
             <input class="form-control mr-sm-2" style="width: 170px;" type="search" placeholder="Search" aria-label="Search">
             <i class="fas fa-search fa-lg"></i>
             </form>
@@ -74,39 +74,17 @@
 @section('main_content')
     <!-- posted area -->
     <div class="container-fluid">
-      <main class="col-sm-9 offset-sm-6 col-md-6 offset-md-3 pt-3">
-        <section class="row text-center pictures">
-          <div class="col-9 col-sm-6 picture">
-            <img src="imgs/pictures/pizza.png" width="400" height="400" alt="">
-          </div>
-          <div class="col-9 col-sm-6 picture">
-            <img src="imgs/pictures/ice.png" width="400" height="400" alt="">
-          </div>
-        </section>
-        <section class="row text-center pictures">
-          <div class="col-9 col-sm-6 picture">
-            <img src="imgs/pictures/mooncafe.jpg" width="400" height="400" alt="">
-          </div>
-          <div class="col-9 col-sm-6 picture">
-            <img src="imgs/pictures/dinner.JPG" width="400" height="400" alt="">
-          </div>
-        </section>
-        <section class="row text-center pictures">
-          <div class="col-9 col-sm-6 picture">
-            <img src="imgs/pictures/fish.jpg" width="400" height="400" alt="">
-          </div>
-          <div class="col-9 col-sm-6 picture">
-            <img src="imgs/pictures/cake.JPG" width="400" height="400" alt="">
-          </div>
-        </section>
-        <section class="row text-center pictures">
-          <div class="col-9 col-sm-6 picture">
-            <img src="imgs/pictures/apa.jpg" width="400" height="400" alt="">
-          </div>
-          <div class="col-9 col-sm-6 picture">
-            <img src="imgs/pictures/panini.JPG" width="400" height="400" alt="">
-          </div>
-        </section>
+        <main>
+            <form class="form-inline photo-area">
+                @foreach($posts as $post)
+                     <div class="col-lg-5 picture">
+                        @if($post->img_url)
+                            <img src="{{ str_replace('public/', 'storage/', $post->img_url) }}" width="400" height="400" alt="">
+                        @endif
+                            <p>{{ $post['created_at'] }}</p>
+                    </div>
+                @endforeach
+            </form>
         </main>
     </div>
 @endsection

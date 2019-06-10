@@ -26,6 +26,7 @@ img.home-logo {
 
 .btn-mypage{
     color: #FF3F6F;
+    padding-right: 10px;
 }
 
 .guest{
@@ -114,32 +115,36 @@ img.home-logo {
   font-size: 20px;
 }
 
-/*seachボタン*/
-.form-inline {
+/*searchボタン*/
+.search {
   padding-top: 10px;
   padding-left: 16px;
   font-family: 'Amatic SC', cursive;
   font-size: 20px;
 }
 
-
-/*
- * Dashboard
- */
-
- /* Pictures */
-.pictures {
-  padding-bottom: 3rem;
-  width: 970px;
-  margin: 0;
-
+/*photo area*/
+main {
+  margin-left: 300px;
 }
 
-main img {
+.photo-area {
+  text-align: center;
+}
+
+.picture {
+  margin: 30px;
+}
+
+.picture img {
   padding: 1.5rem;
   border: 1px solid #CCCCCC;
 }
 
+.photo-area p {
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+}
 /*logoutボタン*/
 .btn-logout{
   color: #32CDA6;
