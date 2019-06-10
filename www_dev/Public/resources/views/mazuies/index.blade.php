@@ -81,7 +81,15 @@
                         @if($post->img_url)
                             <img src="{{ str_replace('public/', 'storage/', $post->img_url) }}" width="400" height="400" alt="">
                         @endif
-                            <p>{{ $post['created_at'] }}</p>
+                            <li id="created_at">{{ $post['created_at'] }}</li>
+                            {{-- dislike btn 機能 --}}
+                          {{--   <form method="POST" action="{{route('post.dislike', ['id' => $post['id']]) }} " > --}}
+                            @csrf
+                            <li><button type="submit" class="btn btn-primary">
+                            <i class="fas fa-thumbs-down fa-lg"></i>
+                            </button></li>
+                            {{-- dislike カウント --}}
+                            {{-- <span>{{ $diary->dislikes->count() }}</span> --}}
                     </div>
                 @endforeach
             </form>

@@ -46,7 +46,7 @@
         </nav>
 
         {{-- ****** Main Contents ****** --}}
-        <div class="container-fluid bg-white mt-5">
+        <div class="container-fluid bg-white mt-2">
             @yield('contents')
         </div>
 

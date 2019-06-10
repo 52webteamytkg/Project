@@ -40,9 +40,9 @@
     {{-- 検索 --}}
         <ul class="nav nav-pills flex-column">
             <li class="nav-item">
-            <form class="form-inline">
+            <form class="form-inline search">
             <input class="form-control mr-sm-2" style="width: 170px;" type="search" placeholder="Search" aria-label="Search">
-            <i class="fas fa-search fa-lg""></i>
+            <i class="fas fa-search fa-lg"></i>
             </form>
             </li>
         </ul>
@@ -75,7 +75,7 @@
 	<div class="container">
 	    <div class="row">
 	      <div class="col-sm-9 col-md-9 col-lg-8 mx-auto">
-	        <div class="card card-signin my-5">
+	        <div class="card card-signin my-3">
 	          <div class="card-body">
                 <div class="pic text-center">
                     <img src="imgs/pictures/pizza.png" alt="pizza">

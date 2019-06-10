@@ -141,10 +141,32 @@ main {
   border: 1px solid #CCCCCC;
 }
 
-.photo-area p {
+#created_at{
   font-family: 'Amatic SC', cursive;
   font-size: 20px;
+  color: #666666;
+  padding-right: 10px;
 }
+
+.picture li {
+  display: inline;
+}
+
+/*dislikeボタン*/
+.btn-primary,
+.btn-primary.disabled, .btn-primary:disabled {
+  width: 50px;
+  text-align: center;
+  background-color: white;
+  color: #32CDA6;
+  border: none;
+}
+/* hover時（マウスカーソルを重ねた時）の色（通常より濃いor暗めの色を指定）*/
+.btn-primary:hover {
+  background-color: white;
+  color: #32CDA6;
+}
+
 /*logoutボタン*/
 .btn-logout{
   color: #32CDA6;
