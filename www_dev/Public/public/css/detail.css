@@ -1,9 +1,9 @@
-img{
+.pic img{
 	width: 600px;
 	height: 400px;
 }
 
-li {
+.btn-dislike li {
 	display: inline-block;
 	color: #32CDA6;
 	padding : 15px 10px;
