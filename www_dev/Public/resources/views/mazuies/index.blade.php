@@ -79,7 +79,9 @@
                 @foreach($posts as $post)
                      <div class="col-lg-5 picture">
                         @if($post->img_url)
-                            <a class=“” href=“{{ route(‘mazuimeshi.detail’) }}“><img src="{{ str_replace('public/', 'storage/', $post->img_url) }}" width="400" height="400" alt=""></a>
+                            <a class="" href="{{ route('mazuimeshi.detail') }}">
+                                <img src="{{ str_replace('public/', 'storage/', $post->img_url) }}" width="400" height="400" alt="">
+                            </a>
                         @endif
                         <ul>
                             <li id="created_at">{{ $post['created_at'] }}</li>
