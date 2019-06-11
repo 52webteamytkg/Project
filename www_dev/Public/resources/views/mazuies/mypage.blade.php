@@ -22,56 +22,62 @@
 @section('main_content')
 	<!-- posted area -->
     <div class="container-fluid">
-      <main class="col-sm-9 offset-sm-6 col-md-6 offset-md-3 pt-3">
+      <main class="myphoto-area pt-3">
         <!-- photo area -->
         <p class="title-mypage">My Photos</p>
-            <section class="row text-center pictures">
-              <div class="col-6 col-sm-4 picture">
+            <form class="form-inline pictures">
+              <div class="col-lg-3 picture">
                 <img src="imgs/pictures/pizza.png" width="200" height="200" alt="">
               </div>
-              <div class="col-6 col-sm-4 picture">
+
+              <div class="col-lg-3 picture">
                 <img src="imgs/pictures/ice.png" width="200" height="200" alt="">
               </div>
-              <div class="col-6 col-sm-4 picture">
+
+              <div class="col-lg-3 picture">
                 <img src="imgs/pictures/ice.png" width="200" height="200" alt="">
               </div>
-            </section>
-            <section class="row text-center pictures">
-              <div class="col-6 col-sm-4 picture">
+
+              <div class="col-lg-3 picture">
                 <img src="imgs/pictures/mooncafe.jpg" width="200" height="200" alt="">
               </div>
-              <div class="col-6 col-sm-4 picture">
+
+              <div class="col-lg-3 picture">
                 <img src="imgs/pictures/dinner.JPG" width="200" height="200" alt="">
               </div>
-              <div class="col-6 col-sm-4 picture">
+
+              <div class="col-lg-3 picture">
                 <img src="imgs/pictures/dinner.JPG" width="200" height="200" alt="">
               </div>
-            </section>
+          </form>
 
         <!--dislike area -->
         <p class="title-mypage">Dislikes</p>
-            <section class="row text-center pictures">
-              <div class="col-6 col-sm-4 picture">
+            <form class="form-inline pictures">
+              <div class="col-lg-3 picture">
                 <img src="imgs/pictures/fish.jpg" width="200" height="200" alt="">
               </div>
-              <div class="col-6 col-sm-4 picture">
+
+              <div class="col-lg-3 picture">
                 <img src="imgs/pictures/cake.JPG" width="200" height="200" alt="">
               </div>
-              <div class="col-6 col-sm-4 picture">
+
+              <div class="col-lg-3 picture">
                 <img src="imgs/pictures/cake.JPG" width="200" height="200" alt="">
               </div>
-            </section>
-            <section class="row text-center pictures">
-              <div class="col-6 col-sm-4 picture">
+
+              <div class="col-lg-3 picture">
                 <img src="imgs/pictures/apa.jpg" width="200" height="200" alt="">
               </div>
-              <div class="col-6 col-sm-4 picture">
+
+              <div class="col-lg-3 picture">
                 <img src="imgs/pictures/panini.JPG" width="200" height="200" alt="">
               </div>
-              <div class="col-6 col-sm-4 picture">
+
+              <div class="col-lg-3 picture">
                 <img src="imgs/pictures/panini.JPG" width="200" height="200" alt="">
               </div>
-            </section>
+            </form>
         </main>
     </div>
 @endsection
