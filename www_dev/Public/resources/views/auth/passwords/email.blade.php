@@ -34,15 +34,15 @@
                         <input type="email" id="inputEmail" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="Email address" name="email" value="{{ old('email') }}" required autofocus>
 
                         <label for="inputEmail">{{ __('E-Mail Address') }}</label>
-                        
+
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
                       </div>
-                </form>
                      <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">{{ __('Send Password Reset Link') }}</button>
+                </form>
               </div>
             </div>
           </div>
