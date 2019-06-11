@@ -16,17 +16,23 @@ img.home-logo {
     width: 180px;
 }
 
+/*webフォント*/
+@font-face {
+  font-family: 'kodomo';
+  src: url('/KodomoRounded-Light.otf') format('opentype');
+}
+
 .mypage{
   list-style-type: none;
   display: inline;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Amatic SC', cursive,'kodomo';
   font-size: 28px;
   color: #666666;
 }
 
 .btn-mypage{
     color: #FF3F6F;
-    padding-right: 10px;
+    padding-right: 15px;
 }
 
 .guest{
