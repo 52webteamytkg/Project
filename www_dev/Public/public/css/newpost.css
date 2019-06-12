@@ -27,30 +27,9 @@
   font-size: 28px;
 }
 
-/* edit area */
-.profile-area {
-  width: 1200px;
-  height: 360px;
-  margin-left: 200px;
-}
 
-/*profile photo*/
-.profile-photo {
-  border-radius: 50%;
-  border: 10px double #32CDA6;
-  margin-left: 20px;
-  margin-right: 100px;
-  margin-bottom: 150px;
-  width: 250px;
-  height: 250px;
-}
-
-/*edit content*/
-.profile-edit {
-  display: inline-block;
-}
-
-.title-comment {
+/*newpost*/
+.title-newpost {
   color: #666666;
   font-family: 'Amatic SC', cursive;
   font-size: 28px;
@@ -61,27 +40,15 @@ p {
   margin-bottom: 8px;
 }
 
-.comment-content {
+.sele-photo {
   width: 500px;
-  height: 180px;
-  padding: 10px;
-  margin: 0;
-  border: 1px solid #CCCCCC;
-}
-
-span {
-width: 350px;
-}
-
-span.w-nomal{
-  word-wrap: break-word;
 }
 
 /*入力フォーム*/
 .form-label-group {
   position: relative;
   margin-bottom: 1rem;
-  width: 600px;
+  width: 500px;
 }
 
 .form-label-group input {
@@ -92,23 +59,6 @@ span.w-nomal{
 .form-label-group>input,
 .form-label-group>label {
   padding: var(--input-padding-y) var(--input-padding-x);
-}
-
-.form-label-group>label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    margin-bottom: 0;
-    line-height: 1.5;
-    color: #999999;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    transition: all .1s ease-in-out;
-    border-left-width: 10px;
-    font-family: 'Amatic SC', cursive;
-    font-size: 22px;
 }
 
 .form-label-group input::-webkit-input-placeholder {
@@ -149,7 +99,23 @@ label {
   font-size: 28px;
 }
 
-/*edit-button*/
+/*コメント欄*/
+#comment {
+  width: 700px;
+  height: 130px;
+  padding: 10px;
+  margin: 10;
+  border: 1px solid #CCCCCC;
+}
+span {
+width: 350px;
+}
+
+span.w-nomal{
+  word-wrap: break-word;
+}
+
+/*newpost-button*/
 /* 通常のボタン色 */
 .btn-primary,
 .btn-primary.disabled, .btn-primary:disabled {
