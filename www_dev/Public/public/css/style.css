@@ -16,17 +16,23 @@ img.home-logo {
     width: 180px;
 }
 
+/*webフォント*/
+@font-face {
+  font-family: 'kodomo';
+  src: url('/KodomoRounded-Light.otf') format('opentype');
+}
+
 .mypage{
   list-style-type: none;
   display: inline;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Amatic SC', cursive,'kodomo';
   font-size: 28px;
   color: #666666;
 }
 
 .btn-mypage{
     color: #FF3F6F;
-    padding-right: 10px;
+    padding-right: 15px;
 }
 
 .guest{
@@ -153,17 +159,15 @@ main {
 }
 
 /*dislikeボタン*/
-.btn-primary,
-.btn-primary.disabled, .btn-primary:disabled {
+.btn-secondly,
+.btn-secondly.disabled, .btn-secondly:disabled {
   width: 50px;
   text-align: center;
-  background-color: white;
   color: #32CDA6;
   border: none;
 }
 /* hover時（マウスカーソルを重ねた時）の色（通常より濃いor暗めの色を指定）*/
-.btn-primary:hover {
-  background-color: white;
+.btn-secondly:hover {
   color: #32CDA6;
 }
 

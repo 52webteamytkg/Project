@@ -44,8 +44,9 @@
 
                         <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
                       </div>
-                </form>
+
                      <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">{{ __('Reset Password') }}</button>
+                </form>
               </div>
             </div>
           </div>

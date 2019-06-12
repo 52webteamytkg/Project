@@ -26,7 +26,7 @@
 	<!-- edit area -->
     <div class="container">
         <div class="row">
-            <div class="profile-area">
+            <div class="profile-area pt-3">
               <!-- 画像 -->
                   <img class="profile-photo"src="imgs/GEN2.jpg" alt="サンプル画像">
 

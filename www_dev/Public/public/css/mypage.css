@@ -50,18 +50,16 @@ nav img {
   font-size: 28px;
 }
 
-
-
-/*
- * Dashboard
- */
-
  /* Pictures */
+.myphoto-area {
+  margin-left: 340px;
+  margin-right: 50px;
+}
+
 .pictures {
   padding-bottom: 3rem;
   width: 970px;
-  margin: 0;
-
+  margin: 20px;
 }
 
 main img {
