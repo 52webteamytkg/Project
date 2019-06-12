@@ -35,6 +35,12 @@
                     @csrf
                 </form>
             </li>
+            {{-- 新規投稿 --}}
+            <li class="nav-item-inout d-inline">
+                <a class="nav-link" href="{{ route('mazuimeshi.newpost')  }}"><button type="button" class="btn btn-outline-primary">New post</button></a>
+            </li>
+
+
         @endauth
     </ul>
     {{-- 検索 --}}

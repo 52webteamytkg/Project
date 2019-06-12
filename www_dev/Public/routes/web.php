@@ -49,5 +49,6 @@ Route::post('members/password/reset', 'Auth\ResetPasswordController@reset');
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/edit','PageController@edit')->name('mazuimeshi.edit');             // edit.blade.php 表示
     Route::get('/mypage','PageController@mypage')->name('mazuimeshi.mypage');       // mypage.blade.php 表示
+    Route::get('/newpost','PageController@newpost')->name('mazuimeshi.newpost');     				// newpost.blade.php 表示
 });
 

@@ -13,11 +13,14 @@
     <ul class="nav nav-pills flex-column">
         <li class="nav-item">
         <a class="nav-link" href="{{ route('mazuimeshi.mypage') }}">Profile</a>
-
         </li>
+
         <li class="nav-item">
         <a class="nav-link" href="{{ route('mazuimeshi.edit') }}">Edit</a>
+        </li>
 
+        <li class="nav-item">
+        <a class="nav-link" href="{{ route('mazuimeshi.newpost') }}">New post</a>
         </li>
     </ul>
 @endsection
