@@ -61,20 +61,9 @@ p {
   margin-bottom: 8px;
 }
 
-.comment-content {
-  width: 500px;
-  height: 180px;
-  padding: 10px;
-  margin: 0;
-  border: 1px solid #CCCCCC;
-}
-
-span {
-width: 350px;
-}
-
-span.w-nomal{
-  word-wrap: break-word;
+/*コメント欄*/
+#comment{
+  height: 130px;
 }
 
 /*入力フォーム*/

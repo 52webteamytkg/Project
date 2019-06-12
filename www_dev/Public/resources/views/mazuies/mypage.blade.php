@@ -19,7 +19,7 @@
         </li>
 
         <li class="nav-item">
-        <a class="nav-link" href="{{ route('mazuimeshi.newpost') }}">New post</a>
+        <a class="nav-link" href="{{ route('mazuimeshi.newpost') }}">New post <i class="fas fa-grin-stars"></i></a>
         </li>
     </ul>
 @endsection

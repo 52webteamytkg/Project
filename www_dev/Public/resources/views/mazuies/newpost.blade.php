@@ -43,22 +43,15 @@
                 {{-- タイトル --}}
                 <p class="title-newpost">Title</p>
                   <div class="form-label-group post-title">
-                      {{-- <label for="titile">title</label> --}}
                       <input type="title" id="title" class="form-control" required autofocus>
                   </div>
                 <!-- コメント -->
                 <p class="title-newpost">Comment</p>
-                  <div class="form-label-group post-commnt">
-                    {{--   <label for="comment">comment</label> --}}
-                      <textarea type="comment" id="comment" class="form-control w-nomal" required autofocus></textarea>
+                  <div class="form-label-group post-comment">
+                      <textarea type="comment" id="comment" class="form-control" required autofocus></textarea>
                   </div>
 
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" style="margin-left: 215px;">New post!</button>
-
-               {{--  <div class="comment-content">
-                  <span class="w-nomal">wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</span>
-                </div>
-              </div> --}}
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" style="margin-left: 120px;">New post!</button>
               </form>
         </main>
     </form>
