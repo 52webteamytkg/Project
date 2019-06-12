@@ -74,4 +74,12 @@ class PageController extends Controller
         return view('mazuies/mypage');
     }
 
+    /************************************
+     * newpost.blade.php 画面表示メソッド
+     ************************************/
+    public function newpost()
+    {
+        return view('mazuies/newpost');
+    }
+
 }
