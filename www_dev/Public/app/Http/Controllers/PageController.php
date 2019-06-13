@@ -55,23 +55,6 @@ class PageController extends Controller
     }
 
     /************************************
-     * login.blade.php 画面表示メソッド
-     ************************************/
-
-    // public function login()
-    // {
-    //     return view('mazuies/login');
-    // }
-
-    /************************************
-     * signup.blade.php 画面表示メソッド
-     ************************************/
-    public function signup()
-    {
-        return view('mazuies.signup');
-    }
-
-    /************************************
      * edit.blade.php 画面表示メソッド
      ************************************/
     public function edit()
@@ -86,6 +69,14 @@ class PageController extends Controller
     {
         $login_id = Auth::user()->id;
         return view('mazuies.mypage',['user_id'=>$login_id]);
+    }
+
+    /************************************
+     * newpost.blade.php 画面表示メソッド
+     ************************************/
+    public function newpost()
+    {
+        return view('mazuies.newpost');
     }
 
 }
