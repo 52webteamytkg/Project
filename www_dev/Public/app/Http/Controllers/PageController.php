@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Comment;
 use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
@@ -30,12 +31,12 @@ class PageController extends Controller
     /************************************
      * detail.blade.php 画面表示メソッド
      ************************************/
-    public function detail()
+    public function detail($post_id)
     {
-        // $post = Post::find($post_id);
-        // $coments = DB::table('comments')->find($post_id);
-        // dd(['post'=>$post]);
-        return view('mazuies.detail');
+        $post = Post::find($post_id);
+        $coments = Comment::where('post_id',$post_id);
+        // dd($post);
+        return view('mazuies.detail',['post'=>$post]);
     }
 
     /************************************

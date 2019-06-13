@@ -85,7 +85,7 @@
                 @foreach($posts as $post)
                      <div class="col-lg-5 picture">
                         @if($post->img_url)
-                            <a class="" href="{{ route('mazuimeshi.detail') }}">
+                            <a class="" href="{{ route('mazuimeshi.detail',['post_id'=>$post->id] ) }}">
                                 <img src="{{ str_replace('public/', 'storage/', $post->img_url) }}" width="400" height="400" alt="">
                             </a>
                         @endif
