@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
+<<<<<<< HEAD
     
     
     
@@ -21,4 +22,7 @@ class Comment extends Model
     {
         return $this->belongsTo('App\Post');
     }
+=======
+    //
+>>>>>>> master
 }

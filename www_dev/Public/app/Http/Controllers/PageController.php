@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Comment;
+use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
 {
@@ -14,15 +16,27 @@ class PageController extends Controller
     {
         // 全件読み込み
         $posts = Post::all();
-        return view('mazuies/index',['posts'=>$posts]);
+        return view('mazuies.index',['posts'=>$posts]);
+    }
+
+    public function ranking()
+    {
+        $posts = 0;
+        // 今参照中の投稿データを引数でもらって、
+        // dislike_postテーブルをSelect（Count）して
+        // dislikeの多い順からソート（ORDER BY -> DESC）する
+        return redirect()->route('mazuies.index',['posts'=>$posts]);
     }
 
     /************************************
      * detail.blade.php 画面表示メソッド
      ************************************/
-    public function detail()
+    public function detail($post_id)
     {
-        return view('mazuies/detail');
+        $post = Post::find($post_id);
+        $coments = Comment::where('post_id',$post_id);
+        // dd($post);
+        return view('mazuies.detail',['post'=>$post]);
     }
 
     /************************************
@@ -30,7 +44,7 @@ class PageController extends Controller
      ************************************/
     public function about()
     {
-        return view('mazuies/about');
+        return view('mazuies.about');
     }
 
     /************************************
@@ -38,24 +52,7 @@ class PageController extends Controller
      ************************************/
     public function policy()
     {
-        return view('mazuies/policy');
-    }
-
-    /************************************
-     * login.blade.php 画面表示メソッド
-     ************************************/
-
-    public function login()
-    {
-        return view('mazuies/login');
-    }
-
-    /************************************
-     * signup.blade.php 画面表示メソッド
-     ************************************/
-    public function signup()
-    {
-        return view('mazuies/signup');
+        return view('mazuies.policy');
     }
 
     /************************************
@@ -63,7 +60,7 @@ class PageController extends Controller
      ************************************/
     public function edit()
     {
-        return view('mazuies/edit');
+        return view('mazuies.edit');
     }
 
     /************************************
@@ -71,7 +68,8 @@ class PageController extends Controller
      ************************************/
     public function mypage()
     {
-        return view('mazuies/mypage');
+        $login_id = Auth::user()->id;
+        return view('mazuies.mypage',['user_id'=>$login_id]);
     }
 
     /************************************
@@ -79,7 +77,7 @@ class PageController extends Controller
      ************************************/
     public function newpost()
     {
-        return view('mazuies/newpost');
+        return view('mazuies.newpost');
     }
 
     

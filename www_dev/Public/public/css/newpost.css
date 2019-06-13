@@ -101,18 +101,11 @@ label {
 
 /*コメント欄*/
 #comment {
-  width: 700px;
+  width: 500px;
   height: 130px;
   padding: 10px;
   margin: 10;
   border: 1px solid #CCCCCC;
-}
-span {
-width: 350px;
-}
-
-span.w-nomal{
-  word-wrap: break-word;
 }
 
 /*newpost-button*/
