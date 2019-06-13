@@ -32,7 +32,7 @@ class PageController extends Controller
      * detail.blade.php 画面表示メソッド
      ************************************/
     public function detail($post_id)
-    {¥
+    {
         $post = Post::find($post_id);
         $coments = Comment::where('post_id',$post_id);
         // dd($post);
