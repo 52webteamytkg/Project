@@ -25,15 +25,15 @@ class CommentController extends Controller
     
     }
 
-    public function store(Request $request){
+    public function store($post_id,Request $request){
  
          $comment = new Comment();//インスタンス化
          // $comment->title = $request->title;
          $comment->user_id = Auth::user()->id;
          $comment->content = $request->content;
          // $comment->post_id = Auth::user()->posts()[0]->id;
-         // $comment->post_id = $request->post_id;
-         $comment->post_id = 1;
+         $comment->post_id = $request->post_id;
+         // $comment->post_id = 1;
          
          
        
