@@ -22,7 +22,8 @@ class PageController extends Controller
      ************************************/
     public function detail()
     {
-        return view('mazuies/detail');
+        $comments = ['aaa','bbbb','cccc'];
+        return view('mazuies/detail',['coments'=>$comments]);
     }
 
     /************************************
