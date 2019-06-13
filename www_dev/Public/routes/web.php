@@ -16,7 +16,7 @@
  **************************************/
 Route::get('/','PageController@index')->name('mazuimeshi.index');               // index.blade.php 表示
 
-Route::get('/detail','PageController@detail')->name('mazuimeshi.detail');       // detail.blade.php 表示
+Route::get('/detail/{post_id}/','PageController@detail')->name('mazuimeshi.detail');       // detail.blade.php 表示
 
 /**************************************
  * ログインに関係ない画面表示

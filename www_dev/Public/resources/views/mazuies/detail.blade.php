@@ -78,7 +78,7 @@
 	        <div class="card card-signin my-3">
 	          <div class="card-body">
                 <div class="pic text-center">
-                    <img src="imgs/pictures/pizza.png" alt="pizza">
+                    <img src="{{ str_replace('public/', '../storage/', $post->img_url) }}" alt="{{$post->title}}">
                 </div>
                 <div class="btn-dislike">
                     <ul>
@@ -88,10 +88,10 @@
                     </ul>
                 </div>
                 <div class="pic-title text-center">
-                    <p>Pizza</p>
+                    <p>{{$post->title}}</p>
                 </div>
                 <div class="pic-info text-center">
-                    <span>店を潰したくて作ったとしか思えない。もし本当にそうなら天才だ。</span>
+                <span>{{$post->caption}}</span>
                 </div>
 
                 <hr class="my-4">
