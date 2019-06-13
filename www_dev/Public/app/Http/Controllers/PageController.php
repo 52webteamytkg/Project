@@ -30,12 +30,12 @@ class PageController extends Controller
     /************************************
      * detail.blade.php 画面表示メソッド
      ************************************/
-    public function detail($post_id)
+    public function detail()
     {
-        $post = Post::find($post_id);
+        // $post = Post::find($post_id);
         // $coments = DB::table('comments')->find($post_id);
         // dd(['post'=>$post]);
-        return view('mazuies.detail',['post'=>$post]);
+        return view('mazuies.detail');
     }
 
     /************************************
