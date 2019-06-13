@@ -20,7 +20,7 @@
         </li>
 
         <li class="nav-item">
-        <a class="nav-link" href="{{ route('mazuimeshi.newpost') }}">New post</a>
+        <a class="nav-link" href="{{ route('mazuimeshi.newpost') }}">New post <i class="fas fa-grin-stars"></i></a>
         </li>
     </ul>
 @endsection
@@ -43,11 +43,9 @@
                   <div class="title-comment">
                     <p>Comment</p>
                   </div>
-                  <div class="comment-content">
-                    <span class="w-nomal">wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</span>
+                  <div class="form-label-group comment-content">
+                      <textarea type="comment" id="comment" class="form-control" required autofocus></textarea>
                   </div>
-                </div>
-
             </div>
         </div>
 
