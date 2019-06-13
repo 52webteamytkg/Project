@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Comment;
 use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
@@ -33,8 +34,8 @@ class PageController extends Controller
     public function detail($post_id)
     {
         $post = Post::find($post_id);
-        // $coments = DB::table('comments')->find($post_id);
-        // dd(['post'=>$post]);
+        $coments = Comment::where('post_id',$post_id);
+        // dd($post);
         return view('mazuies.detail',['post'=>$post]);
     }
 
@@ -52,23 +53,6 @@ class PageController extends Controller
     public function policy()
     {
         return view('mazuies.policy');
-    }
-
-    /************************************
-     * login.blade.php 画面表示メソッド
-     ************************************/
-
-    // public function login()
-    // {
-    //     return view('mazuies/login');
-    // }
-
-    /************************************
-     * signup.blade.php 画面表示メソッド
-     ************************************/
-    public function signup()
-    {
-        return view('mazuies.signup');
     }
 
     /************************************
@@ -93,7 +77,7 @@ class PageController extends Controller
      ************************************/
     public function newpost()
     {
-        return view('mazuies/newpost');
+        return view('mazuies.newpost');
     }
 
 }

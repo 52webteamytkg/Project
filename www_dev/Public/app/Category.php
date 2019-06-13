@@ -8,5 +8,5 @@ class Category extends Model
 {
     public function posts(){
         return $this->belongsToMany('App\post');
-}
+    }
 }
