@@ -79,4 +79,6 @@ class PageController extends Controller
         return view('mazuies.newpost');
     }
 
+    
+
 }

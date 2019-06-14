@@ -4,8 +4,8 @@
 }
 
 .pic img{
-	width: 600px;
 	height: 400px;
+	marigin: 0;
 }
 
 .btn-dislike li {
@@ -14,9 +14,18 @@
 	padding : 15px 10px;
 }
 
+@font-face {
+  font-family: 'kodomo';
+  src: url('/KodomoRounded-Light.otf') format('opentype');
+}
+
 .pic-title {
-	font-family: 'Amatic SC', cursive;
+	font-family: 'Amatic SC', cursive, 'kodomo';
 	font-size: 40px;
+}
+
+p {
+	margin: 0;
 }
 
 .coment-list{

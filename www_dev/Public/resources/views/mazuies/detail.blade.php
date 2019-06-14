@@ -100,15 +100,17 @@
                     <span>{{$comment->content}}</span>
                 </div>
                 @endforeach
-                <div class="form-group mt-4">
-                <label for="exampleFormControlTextarea1">Comment</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-                </div>
+                <form action="{{ route('comment.store',['post'=>$post->id])}}" method="POST"> 
+                    @csrf
+                    <div class="form-group mt-4">
+                    <label for="exampleFormControlTextarea1">Comment</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="content"></textarea>
+                    </div>
 
-                <div class="btn-submit">
-                <input type="submit" class="btn btn-outline-primary" value="Submit!">
-                </div>
-
+                    <div class="btn-submit">
+                    <input type="submit" class="btn btn-outline-primary" value="Submit!">
+                    </div>
+                </form>
 	          </div>
 	        </div>
 	      </div>
