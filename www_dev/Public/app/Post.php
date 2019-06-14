@@ -11,7 +11,7 @@ class Post extends Model
     }
 
 
-    public function post(){
+    public function categories(){
         return $this->belongsToMany('App\category');
     }
 }
