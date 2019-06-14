@@ -34,9 +34,8 @@ class PageController extends Controller
     public function detail($post_id)
     {
         $post = Post::find($post_id);
-        $coments = Comment::where('post_id',$post_id);
-        // dd($post);
-        return view('mazuies.detail',['post'=>$post]);
+        $coments = Comment::where('post_id',$post_id)->get();
+        return view('mazuies.detail',['post'=>$post],['comments'=>$coments]);
     }
 
     /************************************

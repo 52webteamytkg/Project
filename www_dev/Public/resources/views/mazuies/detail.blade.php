@@ -95,20 +95,11 @@
                 </div>
 
                 <hr class="my-4">
-               {{--  @foreach($comments as $comment) --}}
+                @foreach ($comments as $comment)
                 <div class="coment-list">
-                    <span>{{-- {{$comment['content'] }} --}}</span>
+                    <span>{{$comment->content}}</span>
                 </div>
-                {{-- @endforeach --}}
-                {{-- <div class="coment-list">
-                    <span>aaaaaaaaaaaaaaaaaaaaaaa</span>
-                </div>
-                <div class="coment-list">
-                    <span>iiiiiiiiiiiiiiiiiiiiiiiii</span>
-                </div>
-                <div class="coment-list">
-                    <span>uuuuuuuuuuuuuuuuuuuuuuuuuuuu</span>
-                </div> --}}
+                @endforeach
                 <div class="form-group mt-4">
                 <label for="exampleFormControlTextarea1">Comment</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
