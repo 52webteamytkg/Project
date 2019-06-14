@@ -95,20 +95,12 @@
                 </div>
 
                 <hr class="my-4">
-
+                @foreach ($comments as $comment)
                 <div class="coment-list">
-                    <span>映えてない。</span>
+                    <span>{{$comment->content}}</span>
                 </div>
-                <div class="coment-list">
-                    <span>aaaaaaaaaaaaaaaaaaaaaaa</span>
-                </div>
-                <div class="coment-list">
-                    <span>iiiiiiiiiiiiiiiiiiiiiiiii</span>
-                </div>
-                <div class="coment-list">
-                    <span>uuuuuuuuuuuuuuuuuuuuuuuuuuuu</span>
-                </div>
-                <form action="{{ route('comments.store')}}" method="POST"> 
+                @endforeach
+                <form action="{{ route('comment.store',['post'=>$post->id])}}" method="POST"> 
                     @csrf
                     <div class="form-group mt-4">
                     <label for="exampleFormControlTextarea1">Comment</label>

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     public function comment(){
-        return $this->belongsToMany('App\commment');
+        return $this->hasMany('App\commments');
     }
 
 
