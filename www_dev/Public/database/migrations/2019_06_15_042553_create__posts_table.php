@@ -19,7 +19,6 @@ class CreatePostsTable extends Migration
             $table->string('img_url', 64);
             $table->text('caption');
             $table->integer('user_id');
-            $table->integer('catrgory_id');
             $table->timestamps();
         });
     }

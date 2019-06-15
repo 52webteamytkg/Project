@@ -52,6 +52,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/newpost', 'PageController@newpost')->name('mazuimeshi.newpost');                     // newpost.blade.php 表示
 
   
+    Route::post('post/store', 'PostController@store')->name('post.store'); //新規投稿機能
 
     Route::post('comment/store/{post}/', 'CommentController@store')->name('comment.store'); // コメント保存処理
   
