@@ -97,11 +97,13 @@
                 <hr class="my-4">
                 {{-- コメント表示 --}}
                 @if (isset( $post->first()->comments ))
-                    @foreach ($post->first()->comments as $comment)
-                    <div class="coment-list">
-                        <span>{{ $comment->content }}</span>
-                    </div>
-                    @endforeach
+                    <ul class="comment-area">
+                        @foreach ($post->first()->comments as $comment)
+                        <li class="coment-list">
+                            <span>{{ $comment->content }}</span>
+                        </li>
+                        @endforeach
+                    </ul>
                 @endif
                 {{-- コメント投稿 --}}
                 @auth
