@@ -49,11 +49,12 @@ Route::post('members/password/reset', 'Auth\ResetPasswordController@reset');
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/edit', 'PageController@edit')->name('mazuimeshi.edit');             // edit.blade.php 表示
     Route::get('/mypage', 'PageController@mypage')->name('mazuimeshi.mypage');       // mypage.blade.php 表示
-    Route::get('/newpost', 'PageController@newpost')->name('mazuimeshi.newpost');                     // newpost.blade.php 表示
+    Route::get('/newpost', 'PageController@newpost')->name('mazuimeshi.newpost');    // newpost.blade.php 表示
 
-  
+    Route::post('/dislike/{post_id}/','DislikeController@dislike')->name('post.dislike');   // Dislike機能
+
 
     Route::post('comment/store/{post}/', 'CommentController@store')->name('comment.store'); // コメント保存処理
-  
+
 
 });
