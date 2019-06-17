@@ -11,7 +11,7 @@ class Post extends Model
         return $this->hasMany('App\Comment');
     }
 
-    public function dislike()
+    public function dislikes()
     {
         return $this->belongsToMany('App\User', 'dislikes')->withTimestamps();
     }

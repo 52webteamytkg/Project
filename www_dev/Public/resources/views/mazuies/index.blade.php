@@ -99,7 +99,7 @@
                                         <i class="fas fa-thumbs-down fa-lg"></i>
                                     </button>
                                     {{-- dislike カウント --}}
-                                    <span>1000000{{-- $post->dislikes->count() --}}</span>
+                                    <span>{{ $post->dislikes->count() }}</span>
                                 </form>
                             </li>
                         </ul>
