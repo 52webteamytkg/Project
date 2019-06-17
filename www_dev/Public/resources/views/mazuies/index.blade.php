@@ -81,7 +81,7 @@
     <!-- posted area -->
     <div class="container-fluid">
         <main>
-            <form class="form-inline photo-area">
+            <div class="form-inline photo-area">
                 @foreach($posts as $post)
                      <div class="col-lg-5 picture">
                         @if($post->img_url)
@@ -92,17 +92,20 @@
                         <ul>
                             <li id="created_at">{{ $post['created_at'] }}</li>
                             {{-- dislike btn 機能 --}}
-                          {{--   <form method="POST" action="{{route('post.dislike', ['id' => $post['id']]) }} " > --}}
-                            @csrf
-                            <li><button type="submit" class="btn btn-secondly">
-                            <i class="fas fa-thumbs-down fa-lg"></i>
-                            </button></li>
-                            {{-- dislike カウント --}}
-                            {{-- <span>{{ $diary->dislikes->count() }}</span> --}}
+                            <li>
+                                <form class="d-inline" method="POST" action="{{ route('post.dislike', ['id' => $post->id]) }}" >
+                                 @csrf
+                                    <button type="submit" class="btn btn-secondly">
+                                        <i class="fas fa-thumbs-down fa-lg"></i>
+                                    </button>
+                                    {{-- dislike カウント --}}
+                                    <span>1000000{{-- $post->dislikes->count() --}}</span>
+                                </form>
+                            </li>
                         </ul>
                     </div>
                 @endforeach
-            </form>
+                </div>
         </main>
     </div>
 @endsection
