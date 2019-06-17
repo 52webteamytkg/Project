@@ -53,8 +53,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('newpost/store', 'PostController@store')->name('post.store'); //新規投稿機能
 
     Route::post('/dislike/{post_id}/','DislikeController@dislike')->name('post.dislike');   // Dislike機能
-
-
     Route::post('comment/store/{post}/', 'CommentController@store')->name('comment.store'); // コメント保存処理
 
 
