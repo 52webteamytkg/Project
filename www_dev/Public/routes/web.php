@@ -14,15 +14,15 @@
 /**************************************
  * ログイン前、後 共通の画面
  **************************************/
-Route::get('/','PageController@index')->name('mazuimeshi.index');               // index.blade.php 表示
+Route::get('/', 'PageController@index')->name('mazuimeshi.index');               // index.blade.php 表示
 
-Route::get('/detail/{post_id}/','PageController@detail')->name('mazuimeshi.detail');       // detail.blade.php 表示
+Route::get('/detail/{post_id}/', 'PageController@detail')->name('mazuimeshi.detail');       // detail.blade.php 表示
 
 /**************************************
  * ログインに関係ない画面表示
  **************************************/
-Route::get('/about','PageController@about')->name('mazuimeshi.about');          // about.blade.php 表示
-Route::get('/policy','PageController@policy')->name('mazuimeshi.policy');       // policy.blade.php 表示
+Route::get('/about', 'PageController@about')->name('mazuimeshi.about');          // about.blade.php 表示
+Route::get('/policy', 'PageController@policy')->name('mazuimeshi.policy');       // policy.blade.php 表示
 
 /**************************************
  * ログイン機能
@@ -51,4 +51,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/mypage','PageController@mypage')->name('mazuimeshi.mypage');       // mypage.blade.php 表示
     Route::get('/newpost','PageController@newpost')->name('mazuimeshi.newpost');    // newpost.blade.php 表示
 });
+    Route::get('edit', 'PageController@edit')->name('mazuimeshi.edit');             // edit.blade.php 表示
+    Route::get('mypage', 'PageController@mypage')->name('mazuimeshi.mypage');       // mypage.blade.php 表示
+    Route::get('newpost', 'PageController@newpost')->name('mazuimeshi.newpost');    // newpost.blade.php 表示
+    Route::post('newpost/store', 'PostController@store')->name('post.store'); //新規投稿機能
 
+    Route::post('/dislike/{post_id}/','DislikeController@dislike')->name('post.dislike');   // Dislike機能
+    Route::post('comment/store/{post}/', 'CommentController@store')->name('comment.store'); // コメント保存処理
+
+
+
+});
