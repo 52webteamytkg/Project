@@ -11,8 +11,7 @@ class PostController extends Controller
 
       public function store(Request $request)
     {
-
-        $post =   new Post();//インスタンス化
+        $post = new Post();//インスタンス化
         $post->title = $request->title;
         $post->img_url = $request->img_url->store('public/posts_img');
         $post->caption = $request->caption;

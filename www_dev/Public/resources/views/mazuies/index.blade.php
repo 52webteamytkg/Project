@@ -93,8 +93,9 @@
                             <li id="created_at">{{ $post['created_at'] }}</li>
                             {{-- dislike btn 機能 --}}
                             <li>
-                                <form class="d-inline" method="POST" action="{{ route('post.dislike', ['id' => $post->id]) }}" >
+                                <form class="d-inline" method="POST" action="{{ route('post.dislike', ['post_id' => $post->id])}}" >
                                  @csrf
+                                    <input type="hidden" name="page" value="mazuimeshi.index">
                                     <button type="submit" class="btn btn-secondly">
                                         <i class="fas fa-thumbs-down fa-lg"></i>
                                     </button>

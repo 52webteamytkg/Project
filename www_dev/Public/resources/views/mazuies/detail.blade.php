@@ -83,8 +83,17 @@
                 <div class="btn-dislike">
                     <ul>
                         <li><i class="fas fa-thumbs-down fa-2x"></i></li>
-                        <li><i class="fas fa-thumbs-down fa-2x"></i></li>
-                        <li><i class="fas fa-thumbs-down fa-2x"></i></li>
+                        <li>
+                            {{dd( $dislikes )}}
+                            <form class="d-inline" method="POST" action="{{-- route('post.dislike', ['post_id' => $post->first()->id]) --}}" >
+                                @csrf
+                                <input type="hidden" name="page" value="mazuimeshi.detail">
+                                <button type="submit" class="btn btn-secondly">
+                                    <i class="fas fa-thumbs-down fa-2x"></i>
+                                </button>
+                            </form>
+                        </li>
+                        <li>{{-- $post->frist()->dislikes->count() --}}</li>
                     </ul>
                 </div>
                 <div class="pic-title text-center">
