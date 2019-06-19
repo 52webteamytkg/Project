@@ -52,8 +52,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('newpost', 'PageController@newpost')->name('mazuimeshi.newpost');    // newpost.blade.php 表示
     Route::post('newpost/store', 'PostController@store')->name('post.store');       //新規投稿機能
 
+    Route::get('/{user}/edit', 'EditController@edit')->name('mazuimesi.edit');//編集処理
+    Route::put('/{user}/update', 'EditController@update')->name('diary.update'); //更新処理
+
     Route::post('/dislike/{post_id}/','DislikeController@dislike')->name('post.dislike');   // Dislike機能
     Route::post('comment/store/{post}/', 'CommentController@store')->name('comment.store'); // コメント保存処理
-
-
 });
