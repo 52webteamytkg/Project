@@ -15,7 +15,8 @@ class PageController extends Controller
     public function index()
     {
         // 全件読み込み
-        $posts = Post::all();
+        // $posts = Post::all();
+        $posts = Post::with('dislikes')->orderBy('id', 'asc')->get();
         return view('mazuies.index',['posts'=>$posts]);
     }
 
@@ -33,9 +34,9 @@ class PageController extends Controller
      ************************************/
     public function detail($post_id)
     {
-        $post = Post::find($post_id);
-        $coments = Comment::where('post_id',$post_id)->get();
-        return view('mazuies.detail',['post'=>$post],['comments'=>$coments]);
+        $post = Post::with('comments')->where('id',$post_id)->orderBy('created_at','DESC')->first();
+        $dislikes = Post::with('dislikes')->where('id',$post_id)->first()->dislikes()->count();
+        return view('mazuies.detail', ['post' => $post, 'dislikes' => $dislikes]);
     }
 
     /************************************
@@ -85,6 +86,6 @@ class PageController extends Controller
         return view('mazuies.newpost');
     }
 
-    
+
 
 }

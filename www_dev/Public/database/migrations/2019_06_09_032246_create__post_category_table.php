@@ -18,7 +18,7 @@ class CreatePostCategoryTable extends Migration
             $table->integer('post_id');
             $table->integer('category_id');
             // $table->timestamps();   // 作成日時は不要のため削除
-            
+
         });
     }
 

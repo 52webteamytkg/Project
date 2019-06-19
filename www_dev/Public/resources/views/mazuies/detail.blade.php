@@ -78,39 +78,56 @@
 	        <div class="card card-signin my-3">
 	          <div class="card-body">
                 <div class="pic text-center">
-                    <img src="{{ str_replace('public/', '../storage/', $post->img_url) }}" alt="{{$post->title}}">
+                    {{-- <img src="{{ str_replace('public/', '../storage/', $post->first()->img_url) }}" alt="{{ $post->first()->title }}"> --}}
+                    <img src="{{ $post->img_url }}" alt="{{ $post->title }}">
                 </div>
                 <div class="btn-dislike">
                     <ul>
                         <li><i class="fas fa-thumbs-down fa-2x"></i></li>
-                        <li><i class="fas fa-thumbs-down fa-2x"></i></li>
-                        <li><i class="fas fa-thumbs-down fa-2x"></i></li>
+                        <li>
+                            <form class="d-inline" method="POST" action="{{ route('post.dislike', ['post_id' => $post->id]) }}" >
+                                @csrf
+                                <input type="hidden" name="page" value="mazuimeshi.detail">
+                                <button type="submit" class="btn btn-secondly">
+                                    <i class="fas fa-thumbs-down fa-2x"></i>
+                                </button>
+                            </form>
+                        </li>
+                        <li>{{ $dislikes }}</li>
                     </ul>
                 </div>
                 <div class="pic-title text-center">
-                    <p>{{$post->title}}</p>
+                    <p>{{ $post->title}}</p>
                 </div>
                 <div class="pic-info text-center">
-                <span>{{$post->caption}}</span>
+                <span>{{ $post->caption }}</span>
                 </div>
 
                 <hr class="my-4">
-                @foreach ($comments as $comment)
-                <div class="coment-list">
-                    <span>{{$comment->content}}</span>
-                </div>
-                @endforeach
-                <form action="{{ route('comment.store',['post'=>$post->id])}}" method="POST"> 
+                {{-- コメント表示 --}}
+                @if (isset( $post->comments ))
+                    <ul class="comment-area">
+                        @foreach ($post->comments as $comment)
+                        <li class="coment-list">
+                            <span>{{ $comment->content }}</span>
+                        </li>
+                        @endforeach
+                    </ul>
+                @endif
+                {{-- コメント投稿 --}}
+                @auth
+                <form action="{{ route('comment.store',['post'=>$post->first()->id])}}" method="POST">
                     @csrf
                     <div class="form-group mt-4">
-                    <label for="exampleFormControlTextarea1">Comment</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="content"></textarea>
+                        <label for="exampleFormControlTextarea1">Comment</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="content"></textarea>
                     </div>
 
                     <div class="btn-submit">
-                    <input type="submit" class="btn btn-outline-primary" value="Submit!">
+                        <input type="submit" class="btn btn-outline-primary" value="Submit!">
                     </div>
                 </form>
+                @endauth
 	          </div>
 	        </div>
 	      </div>
