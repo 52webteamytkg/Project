@@ -30,7 +30,7 @@ class PostController extends Controller
 
     private function saveImg($image)
     {
-        // デフォルトではstorage/app/images/profilePictureに保存
+        // デフォルトではstorage/app/images/posts_imgに保存
         // ファイル名は自動で設定
         // php artisan storage:linkでシンボリックリンクを作成
 
@@ -41,6 +41,6 @@ class PostController extends Controller
 
         $imgPath = $image->store('images/posts_img', 'public');
 
-        return 'storage/' . $imgPath;
+        return '../storage/' . $imgPath;
     }
 }
