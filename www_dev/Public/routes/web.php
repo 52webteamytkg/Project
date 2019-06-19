@@ -51,10 +51,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/mypage', 'PageController@mypage')->name('mazuimeshi.mypage');       // mypage.blade.php 表示
     Route::get('/newpost', 'PageController@newpost')->name('mazuimeshi.newpost');                     // newpost.blade.php 表示
 
+    Route::get('/{user}/edit', 'EditController@edit')->name('mazuimesi.edit');//編集処理
+    Route::put('/{user}/update', 'EditController@update')->name('diary.update'); //更新処理
+
   
     Route::post('post/store', 'PostController@store')->name('post.store'); //新規投稿機能
 
     Route::post('comment/store/{post}/', 'CommentController@store')->name('comment.store'); // コメント保存処理
-  
-
 });
