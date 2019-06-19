@@ -78,27 +78,36 @@
 	        <div class="card card-signin my-3">
 	          <div class="card-body">
                 <div class="pic text-center">
-                    <img src="{{ str_replace('public/', '../storage/', $post->first()->img_url) }}" alt="{{ $post->first()->title }}">
+                    {{-- <img src="{{ str_replace('public/', '../storage/', $post->first()->img_url) }}" alt="{{ $post->first()->title }}"> --}}
+                    <img src="{{ $post->img_url }}" alt="{{ $post->title }}">
                 </div>
                 <div class="btn-dislike">
                     <ul>
                         <li><i class="fas fa-thumbs-down fa-2x"></i></li>
-                        <li><i class="fas fa-thumbs-down fa-2x"></i></li>
-                        <li><i class="fas fa-thumbs-down fa-2x"></i></li>
+                        <li>
+                            <form class="d-inline" method="POST" action="{{ route('post.dislike', ['post_id' => $post->id]) }}" >
+                                @csrf
+                                <input type="hidden" name="page" value="mazuimeshi.detail">
+                                <button type="submit" class="btn btn-secondly">
+                                    <i class="fas fa-thumbs-down fa-2x"></i>
+                                </button>
+                            </form>
+                        </li>
+                        <li>{{ $dislikes }}</li>
                     </ul>
                 </div>
                 <div class="pic-title text-center">
-                    <p>{{ $post->first()->title}}</p>
+                    <p>{{ $post->title}}</p>
                 </div>
                 <div class="pic-info text-center">
-                <span>{{ $post->first()->caption }}</span>
+                <span>{{ $post->caption }}</span>
                 </div>
 
                 <hr class="my-4">
                 {{-- コメント表示 --}}
-                @if (isset( $post->first()->comments ))
+                @if (isset( $post->comments ))
                     <ul class="comment-area">
-                        @foreach ($post->first()->comments as $comment)
+                        @foreach ($post->comments as $comment)
                         <li class="coment-list">
                             <span>{{ $comment->content }}</span>
                         </li>

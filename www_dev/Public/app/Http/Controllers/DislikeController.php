@@ -1,24 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Post;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
 class DislikeController extends Controller
 {
-    public function dislike($post_id)
+    public function dislike($post_id, Request $request)
     {
         // idを元にPostデータ１件取得
         $post = Post::where('id', $post_id)->with('dislikes')->first();
-
-        dd($post);
-
-        // likesテーブルに選択されているdiaryとログインしているユーザーのidをINSERTする
-        $post->likes()->attach(Auth::user()->id);
-        // INSERT INTO likes (diary_id, user_id) VALUES ($diary->id, Auth::user->id)
-
-        return redirect()->route('mazuimeshi.index');
+        // likesテーブルに選択されているpostとログインしているユーザーのidをINSERTする
+        $post->dislikes()->attach(Auth::user()->id);
+        // INSERT INTO dislikes (post_id, user_id) VALUES ($post->id, Auth::user->id)
+        return redirect()->route($request->page,$post_id);
     }
 
 
