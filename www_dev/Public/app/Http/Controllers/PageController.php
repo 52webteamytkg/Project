@@ -34,8 +34,9 @@ class PageController extends Controller
      ************************************/
     public function detail($post_id)
     {
-        $post = Post::with('comments')->where('id',$post_id)->orderBy('created_at','DESC')->get();
-        return view('mazuies.detail',['post'=>$post]);
+        $post = Post::with('comments')->where('id',$post_id)->orderBy('created_at','DESC')->first();
+        $dislikes = Post::with('dislikes')->where('id',$post_id)->first()->dislikes()->count();
+        return view('mazuies.detail', ['post' => $post, 'dislikes' => $dislikes]);
     }
 
     /************************************
