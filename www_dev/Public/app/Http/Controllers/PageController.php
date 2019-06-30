@@ -58,9 +58,15 @@ class PageController extends Controller
     /************************************
      * edit.blade.php 画面表示メソッド
      ************************************/
-    public function edit()
+    public function edit($user_id)
     {
-        return view('mazuies.edit');
+
+
+        $user=User::find($user_id);
+        
+
+        return view('mazuies.edit',['user' => $user]);
+        
     }
 
     /************************************
