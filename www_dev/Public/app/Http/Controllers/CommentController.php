@@ -18,7 +18,6 @@ class CommentController extends Controller
 
    public function store($post_id,Request $request)
    {
-
          $comment = new Comment();//インスタンス化
          $comment->user_id = Auth::user()->id;
          $comment->content = $request->content;
@@ -27,7 +26,6 @@ class CommentController extends Controller
 
          //detailページに戻る（リダイレクト処理）
          return redirect()->route('mazuimeshi.detail',['post_id'=>$post_id]);
-
    }
 
 }

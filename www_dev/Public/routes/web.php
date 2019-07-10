@@ -47,13 +47,21 @@ Route::post('members/password/reset', 'Auth\ResetPasswordController@reset');
  * ログイン後
  **************************************/
 Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('/edit','PageController@edit')->name('mazuimeshi.edit');             // edit.blade.php 表示
+    Route::get('/mypage','PageController@mypage')->name('mazuimeshi.mypage');       // mypage.blade.php 表示
+    Route::get('/newpost','PageController@newpost')->name('mazuimeshi.newpost');    // newpost.blade.php 表示
     Route::get('edit', 'PageController@edit')->name('mazuimeshi.edit');             // edit.blade.php 表示
     Route::get('mypage', 'PageController@mypage')->name('mazuimeshi.mypage');       // mypage.blade.php 表示
     Route::get('newpost', 'PageController@newpost')->name('mazuimeshi.newpost');    // newpost.blade.php 表示
+
     Route::post('newpost/store', 'PostController@store')->name('post.store');       //新規投稿機能
+    Route::get('/{user}/edit', 'EditController@edit')->name('mazuimesi.edit');      //編集処理
+    Route::put('/{user}/update', 'EditController@update')->name('diary.update');    //更新処理
 
     Route::post('/dislike/{post_id}/','DislikeController@dislike')->name('post.dislike');   // Dislike機能
     Route::post('comment/store/{post_id}/', 'CommentController@store')->name('comment.store'); // コメント保存処理
+
 
 
 });
