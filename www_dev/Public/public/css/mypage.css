@@ -40,12 +40,12 @@
 }
 
 .pictures {
+  margin: 20px;
   padding-bottom: 3rem;
   width: 970px;
-  margin: 20px;
 }
 
 main img {
-  padding: 1.5rem;
   border: 1px solid #CCCCCC;
+  padding: 1.5rem;
 }

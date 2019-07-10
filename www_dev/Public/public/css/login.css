@@ -16,10 +16,10 @@
 }
 
 .card-signin .card-title {
-  margin-bottom: 2rem;
   font-weight: 300;
   font-size: 2rem;
   font-family: 'Amatic SC', cursive;
+  margin-bottom: 2rem;
 }
 
 .card-signin .card-body {
@@ -31,15 +31,15 @@
 }
 
 .form-signin .btn {
-  font-size: 25px;
   border-radius: 5rem;
-  letter-spacing: .1rem;
+  font-size: 25px;
   font-weight: bold;
+  letter-spacing: .1rem;
+  margin-left: 50px;
+  margin-right: 50px;
   padding: 1rem;
   transition: all 0.2s;
   width: 300px;
-  margin-left: 50px;
-  margin-right: 50px;
 }
 
 .form-label-group {
@@ -48,8 +48,8 @@
 }
 
 .form-label-group input {
-  height: 40px;
   border-radius: 2rem;
+  height: 40px;
 }
 
 .form-label-group>input,
@@ -63,16 +63,16 @@
   left: 0;
   display: block;
   width: 100%;
-  margin-bottom: 0;
   /* Override default `<label>` margin */
-  line-height: 1.5;
-  color: #999999;
   border: 1px solid transparent;
-  border-radius: .25rem;
-  transition: all .1s ease-in-out;
   border-left-width: 10px;
+  border-radius: .25rem;
+  color: #999999;
   font-family: 'Amatic SC', cursive;
   font-size:22px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  transition: all .1s ease-in-out;
 }
 
 .form-label-group input::-webkit-input-placeholder {
@@ -101,24 +101,24 @@
 }
 
 .form-label-group input:not(:placeholder-shown)~label {
+  color: #777;
+  font-size: 12px;
   padding-top: calc(var(--input-padding-y) / 3);
   padding-bottom: calc(var(--input-padding-y) / 3);
-  font-size: 12px;
-  color: #777;
 }
 
 .form-check-label {
-   font-family: 'Amatic SC', cursive;
-   font-size: 20px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
 }
 
 /*signin-button*/
 /* 通常のボタン色 */
 .btn-primary,
 .btn-primary.disabled, .btn-primary:disabled {
-  color: #666666;
   background-color: #32CDA6;
   border-color: #32CDA6;
+  color: #666666;
   font-family: 'Amatic SC', cursive;
 }
 /* hover時（マウスカーソルを重ねた時）の色（通常より濃いor暗めの色を指定）*/
@@ -140,10 +140,10 @@
 
 .sns li {
   display: inline-block;
-  width:100px;
   height:100px;
   line-height: 100px;
   padding-right: 30px;
+  width:100px;
 }
 
 .fa-facebook-square {
@@ -159,15 +159,15 @@
 }
 
 .signup_text {
-  font-family: 'Amatic SC', cursive;
-  font-size: 22px;
   color: #999999;
   border-bottom: 1px solid #999999;
+  font-family: 'Amatic SC', cursive;
+  font-size: 22px;
 }
 
 /*Forgot Your Password?*/
 .btn-link {
+  color: #FF3F6F;
   font-family: 'Amatic SC', cursive;
   font-size: 22px;
-  color: #FF3F6F;
 }
