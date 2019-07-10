@@ -30,7 +30,7 @@ Route::get('/policy', 'PageController@policy')->name('mazuimeshi.policy');      
 // ** Authクラスを利用するため削除 **
 // Route::get('/mylogin','PageController@login')->name('mazuimeshi.login');        // login.blade.php 表示
 // Route::get('/signup','PageController@signup')->name('mazuimeshi.signup');       // signup.blade.php 表示
-// Auth::routes(); -> 個別設定に変更
+// Auth::routes(); // -> 個別設定に変更
 Route::get('members/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('members/login', 'Auth\LoginController@login');
 Route::post('members/logout', 'Auth\LoginController@logout')->name('logout');
@@ -53,7 +53,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('newpost/store', 'PostController@store')->name('post.store');       //新規投稿機能
 
     Route::post('/dislike/{post_id}/','DislikeController@dislike')->name('post.dislike');   // Dislike機能
-    Route::post('comment/store/{post}/', 'CommentController@store')->name('comment.store'); // コメント保存処理
+    Route::post('comment/store/{post_id}/', 'CommentController@store')->name('comment.store'); // コメント保存処理
 
 
 });

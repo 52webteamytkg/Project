@@ -116,7 +116,7 @@
                 @endif
                 {{-- コメント投稿 --}}
                 @auth
-                <form action="{{ route('comment.store',['post'=>$post->first()->id])}}" method="POST">
+                <form action="{{ route('comment.store',['post'=>$post->id])}}" method="POST">
                     @csrf
                     <div class="form-group mt-4">
                         <label for="exampleFormControlTextarea1">Comment</label>

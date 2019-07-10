@@ -16,7 +16,7 @@ class PageController extends Controller
     {
         // 全件読み込み
         // $posts = Post::all();
-        $posts = Post::with('dislikes')->orderBy('id', 'asc')->get();
+        $posts = Post::with('dislikes')->orderBy('id', 'desc')->get();
         return view('mazuies.index',['posts'=>$posts]);
     }
 
